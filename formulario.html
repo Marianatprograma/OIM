@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="date"
+      name="birthday"
+      id="birthday"
+      min="1920-01-01"
+    />
+
+    <input type="submit" onclick="comprobarEdad()" />
+
+    <script>
+      window.onload = () => {
+        const date = new Date();
+
+        const year = date.getFullYear();
+      
+        const month = String(date.getMonth() + 1).padStart(2, "0");
+      
+        const day = String(date.getDate()).padStart(2, "0");
+      
+        const joined = [year, month, day].join("-");
+
+        let birthday = document.getElementById("birthday");
+        birthday.setAttribute("max", `${joined}`);
+      
+      };
+  
+    
+      const comprobarEdad = () => {
+        var birthday = document.getElementById("birthday").value;
+
+        if( getAge(birthday) < 18 ){
+
+          alert("Muchas gracias por registrarte, actualmente el proceso de caracterización está dirigido a mayores de 18 años. Al aceptar los términos del manejo de datos, nos permitirás contactarte en el futuro")
+        }{
+          alert("Tu si eres mayor de edad")
+        }
+
+     
+      };
+
+      const getAge = (dateString) => {
+        var ageInMilliseconds = new Date() - new Date(dateString);
+        return Math.floor(ageInMilliseconds / 1000 / 60 / 60 / 24 / 365); 
+      };
+    </script>
+  </body>
+</html>
