@@ -4,17 +4,70 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario OIM</title>
   </head>
   <body>
-    <input
-      type="date"
-      name="birthday"
-      id="birthday"
-      min="1920-01-01"
-    />
 
-    <input type="submit" onclick="comprobarEdad()" />
+    <div class="formulario">
+
+      <label for="birthday"> Seleccione su fecha de nacimiento </label>
+      <input
+        type="date"
+        name="birthday"
+        id="birthday"
+        min="1920-01-01"
+      />
+
+      <label for="" > Seleccione la ciudad en la que vive actualmente</label>
+      <select name="city" id="city">
+        <option hidden> --Seleccionar--</option>
+        <option value="Miami">Miami - Estados Unidos de Norteamérica
+        </option>
+        <option value="Nueva York">Nueva York - Estados Unidos de Norteamérica</option>
+        <option value="Madrid">Madrid - España</option>
+        <option value="Londres">Londres - Inglaterra</option>
+        <option value="París">París - Francia</option>
+
+      </select>
+      <label for="status" > Teniendo en cuenta su lugar  de residencia actual, ¿cuál de los siguientes describe su status vigente?</label>
+      <select name="status" id="status">
+        <option  hidden> --Seleccionar--</option>
+        <option value="Visa temporal">Visa temporal para no imigrantes (Ej. Visa de turismo, estudio, negocios)
+        </option>
+        <option value="Residencia temporal">Residencia temporal (permiso de residencia de duración determinada)</option>
+        <option value="Residencia permanente">Residencia permanente (permiso ilimitado de residencia)
+        </option>
+        <option value="Ciudadano">Ciudadano</option>
+        <option value="sin status">Sin estatus de residencia oficial</option>
+        <option value="no responde"> Prefiero no responder </option>
+
+      </select>
+
+      <label for="diaspora">¿Usted se considera parte de la diáspora de Colombia? </label>
+      <div class="respuesta">
+
+        <!-- Hacer funcion para que si responde si abra un campo input type text -->
+        <input type="radio" id="si-diaspora"> 
+        <label for="si-diaspora">Si</label>
+
+      </div>
+      <div class="respuesta">
+        <input type="radio" id="no-diaspora" > 
+        <label for="no-diaspora">No</label>
+
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+
+    <button  onclick="comprobarEdad()"> Continuar y enviar </button>
 
     <script>
       window.onload = () => {
@@ -41,10 +94,10 @@
 
           alert("Muchas gracias por registrarte, actualmente el proceso de caracterización está dirigido a mayores de 18 años. Al aceptar los términos del manejo de datos, nos permitirás contactarte en el futuro")
         }{
-          alert("Tu si eres mayor de edad")
-        }
 
-     
+          console.log("si es mayor de edad")
+          //Enviar datos a Firebase y dejarlo continuar con el formulario.
+        }
       };
 
       const getAge = (dateString) => {

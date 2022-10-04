@@ -1,0 +1,8 @@
+.formulario{
+    display: flex;
+    flex-direction: column;
+
+    background: rgba(182, 182, 248, 0.432);
+
+    
+}
