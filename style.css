@@ -6,3 +6,76 @@
 
     
 }
+
+
+#light-bulb{
+    cursor: pointer;
+    position: relative;
+}
+#light-bulb:hover #pregunta3 {
+    visibility: visible;
+}
+
+#pregunta3{
+    position: absolute;
+    visibility: hidden;
+    top: 10px;
+    right: -4rem;
+    width: 8rem;
+    background-color: #cccccc;
+    color: white;
+    border-radius: .3rem;
+    padding: .5rem;
+
+    
+}
+#pregunta3::after{
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #cccccc transparent;
+
+
+
+}
+
+
+#pensativa{
+    cursor: pointer;
+    position: relative;
+}
+#pensativa:hover #pregunta4 {
+    visibility: visible;
+}
+
+#pregunta4{
+    position: absolute;
+    visibility: hidden;
+    top: 9px;
+    right: -7rem;
+    width: 15rem;
+    background-color: #cccccc;
+    color: white;
+    border-radius: .3rem;
+    padding: .5rem;
+
+    
+}
+#pregunta4::after{
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #cccccc transparent;
+
+
+
+}
+

@@ -4,105 +4,140 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Formulario OIM</title>
   </head>
   <body>
-
     <div class="formulario">
-
       <label for="birthday"> Seleccione su fecha de nacimiento </label>
-      <input
-        type="date"
-        name="birthday"
-        id="birthday"
-        min="1920-01-01"
-      />
 
-      <label for="" > Seleccione la ciudad en la que vive actualmente</label>
+      <input type="date" name="birthday" id="birthday" min="1920-01-01" />
+
+      <label for=""> Seleccione la ciudad en la que vive actualmente</label>
       <select name="city" id="city">
-        <option hidden> --Seleccionar--</option>
-        <option value="Miami">Miami - Estados Unidos de Norteamérica
+        <option hidden>--Seleccionar--</option>
+        <option value="Miami">Miami - Estados Unidos de Norteamérica</option>
+        <option value="Nueva York">
+          Nueva York - Estados Unidos de Norteamérica
         </option>
-        <option value="Nueva York">Nueva York - Estados Unidos de Norteamérica</option>
         <option value="Madrid">Madrid - España</option>
         <option value="Londres">Londres - Inglaterra</option>
         <option value="París">París - Francia</option>
-
       </select>
-      <label for="status" > Teniendo en cuenta su lugar  de residencia actual, ¿cuál de los siguientes describe su status vigente?</label>
+      <label for="status">
+        Teniendo en cuenta su lugar de residencia actual, ¿cuál de los
+        siguientes describe su status vigente?
+        <span id="light-bulb"
+          >💡
+          <p id="pregunta3">
+            Recuerde que la información acá registrada busca la caracterización
+            de la diáspora colombiana, no incide en procesos legales
+            individuales
+          </p>
+        </span></label
+      >
+
       <select name="status" id="status">
-        <option  hidden> --Seleccionar--</option>
-        <option value="Visa temporal">Visa temporal para no imigrantes (Ej. Visa de turismo, estudio, negocios)
+        <option hidden>--Seleccionar--</option>
+        <option value="Visa temporal">
+          Visa temporal para no imigrantes (Ej. Visa de turismo, estudio,
+          negocios)
         </option>
-        <option value="Residencia temporal">Residencia temporal (permiso de residencia de duración determinada)</option>
-        <option value="Residencia permanente">Residencia permanente (permiso ilimitado de residencia)
+        <option value="Residencia temporal">
+          Residencia temporal (permiso de residencia de duración determinada)
+        </option>
+        <option value="Residencia permanente">
+          Residencia permanente (permiso ilimitado de residencia)
         </option>
         <option value="Ciudadano">Ciudadano</option>
         <option value="sin status">Sin estatus de residencia oficial</option>
-        <option value="no responde"> Prefiero no responder </option>
-
+        <option value="no responde">Prefiero no responder</option>
       </select>
 
-      <label for="diaspora">¿Usted se considera parte de la diáspora de Colombia? </label>
-      <div class="respuesta">
-
-        <!-- Hacer funcion para que si responde si abra un campo input type text -->
-        <input type="radio" id="si-diaspora"> 
-        <label for="si-diaspora">Si</label>
-
+      <div class="pregunta4">
+        <label for="diaspora"
+          >¿Usted se considera parte de la diáspora de Colombia?
+          <span id="pensativa">
+            🤔
+            <p id="pregunta4">
+              Una diáspora se define como los individuos y miembros de redes,
+              asociaciones y comunidades, que han salido de su país de origen,
+              pero mantienen vínculos con sus países de origen. Este concepto
+              cubre a las comunidades de expatriados más asentadas, los
+              trabajadores migrantes que residen temporalmente en el extranjero,
+              los expatriados con la nacionalidad del país de acogida, las
+              personas con doble nacionalidad y los migrantes de segunda/tercera
+              generación (OIM)
+            </p>
+          </span>
+        </label>
+        <div class="respuesta">
+          <!-- Hacer funcion para que si responde si abra un campo input type text -->
+          <input
+            type="radio"
+            name="diaspora"
+            id="si-diaspora"
+            checked
+            onclick="showInput()"
+          />
+          <label for="si-diaspora">Si</label>
+          <div id="elemento">
+            <input type="text" id="porque" placeholder="¿Por qué?" />
+          </div>
+        </div>
+        <div class="respuesta">
+          <input
+            type="radio"
+            name="diaspora"
+            id="no-diaspora"
+            onclick="showInput()"
+          />
+          <label for="no-diaspora">No</label>
+        </div>
       </div>
-      <div class="respuesta">
-        <input type="radio" id="no-diaspora" > 
-        <label for="no-diaspora">No</label>
-
-      </div>
-
-
-
     </div>
 
-
-
-
-
-
-    <button  onclick="comprobarEdad()"> Continuar y enviar </button>
+    <button onclick="comprobarEdad()">Continuar y enviar</button>
 
     <script>
       window.onload = () => {
         const date = new Date();
 
         const year = date.getFullYear();
-      
+
         const month = String(date.getMonth() + 1).padStart(2, "0");
-      
+
         const day = String(date.getDate()).padStart(2, "0");
-      
+
         const joined = [year, month, day].join("-");
 
         let birthday = document.getElementById("birthday");
         birthday.setAttribute("max", `${joined}`);
-      
       };
-  
-    
+
+      const showInput = () => {
+        document.getElementById("si-diaspora").checked
+          ? (document.getElementById("elemento").style.display = "block")
+          : (document.getElementById("elemento").style.display = "none");
+      };
+
       const comprobarEdad = () => {
         var birthday = document.getElementById("birthday").value;
 
-        if( getAge(birthday) < 18 ){
-
-          alert("Muchas gracias por registrarte, actualmente el proceso de caracterización está dirigido a mayores de 18 años. Al aceptar los términos del manejo de datos, nos permitirás contactarte en el futuro")
-        }{
-
-          console.log("si es mayor de edad")
+        if (getAge(birthday) < 18) {
+          alert(
+            "Muchas gracias por registrarte, actualmente el proceso de caracterización está dirigido a mayores de 18 años. Al aceptar los términos del manejo de datos, nos permitirás contactarte en el futuro"
+          );
+        }
+        {
+          console.log("si es mayor de edad");
           //Enviar datos a Firebase y dejarlo continuar con el formulario.
         }
       };
 
       const getAge = (dateString) => {
         var ageInMilliseconds = new Date() - new Date(dateString);
-        return Math.floor(ageInMilliseconds / 1000 / 60 / 60 / 24 / 365); 
+        return Math.floor(ageInMilliseconds / 1000 / 60 / 60 / 24 / 365);
       };
     </script>
   </body>
