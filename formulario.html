@@ -25,7 +25,7 @@
         <option value="París">París - Francia</option>
       </select>
       <label for="status">
-        Teniendo en cuenta su lugar de residencia actual, ¿cuál de los
+        Teniendo en cuenta su lugar de residencia actual, ¿Cuál de los
         siguientes describe su status vigente?
         <span id="light-bulb"
           >💡
@@ -72,12 +72,11 @@
           </span>
         </label>
         <div class="respuesta">
-          <!-- Hacer funcion para que si responde si abra un campo input type text -->
+          
           <input
             type="radio"
             name="diaspora"
             id="si-diaspora"
-            checked
             onclick="showInput()"
           />
           <label for="si-diaspora">Si</label>
@@ -113,6 +112,8 @@
 
         let birthday = document.getElementById("birthday");
         birthday.setAttribute("max", `${joined}`);
+
+        document.getElementById("elemento").style.display = "none";
       };
 
       const showInput = () => {
@@ -125,6 +126,8 @@
         var birthday = document.getElementById("birthday").value;
 
         if (getAge(birthday) < 18) {
+
+          //Diseñar un popUp para no mostrar los mensajes tan simples con un alert
           alert(
             "Muchas gracias por registrarte, actualmente el proceso de caracterización está dirigido a mayores de 18 años. Al aceptar los términos del manejo de datos, nos permitirás contactarte en el futuro"
           );
