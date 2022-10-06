@@ -69,10 +69,11 @@
               personas con doble nacionalidad y los migrantes de segunda/tercera
               generación (OIM)
             </p>
+
+            <!-- Prefiero que sea popUp está muy largo el texto -->
           </span>
         </label>
         <div class="respuesta">
-          
           <input
             type="radio"
             name="diaspora"
@@ -96,7 +97,87 @@
       </div>
     </div>
 
-    <button onclick="comprobarEdad()">Continuar y enviar</button>
+    <div class="btn">
+      <button onclick="comprobarEdad()">Continuar y enviar</button>
+    </div>
+
+    <div class="second">
+      <div class="cajas">
+        <label for="sexo">
+          ¿Cuál es su sexo?
+          <span id="interrogacion">
+            ❓
+            <p id="pregunta5">
+              Se refiere a las características genéticas, endocrinas y
+              morfológicas del cuerpo al nacer.
+            </p>
+          </span></label
+        >
+
+        <select name="sexo" id="sexo">
+          <option hidden>--Seleccionar--</option>
+          <option value="Hombre">Hombre</option>
+          <option value="Mujer">Mujer</option>
+          <option value="Intersexual">Intersexual</option>
+          <option value="Prefiero no responder">Prefiero no responder</option>
+        </select>
+      </div>
+
+      <div class="cajas">
+        <label for="orientacion"
+          >¿Con cuál orientación sexual se identifica?</label
+        >
+        <select name="orientacion" id="orientacion">
+          <option hidden>--Seleccionar--</option>
+          <option value="Heterosexual">Heterosexual</option>
+          <option value="Lesbiana">Lesbiana</option>
+          <option value="Gay">Gay</option>
+          <option value="Bisexual">Bisexual</option>
+          <option value="Bisexual">Bisexual</option>
+          <option value="Queer">Queer</option>
+          <option value="Prefiero no responder">Prefiero no responder</option>
+        </select>
+      </div>
+
+      <div class="cajas">
+        <label for="civil">¿Cuál es su estado civil?</label>
+        <select name="civil" id="civil">
+          <option hidden>--Seleccionar--</option>
+          <option value="Casado(a)">Casado(a)</option>
+          <option value="Unión libre">Unión libre</option>
+          <option value="Soltero(a)">Soltero(a)</option>
+          <option value="Viudo(a)">Viudo(a)</option>
+        </select>
+      </div>
+
+      <div class="cajas">
+        <label for="hijos"> ¿Cuántos hijos tiene? </label>
+        <div class="opciones">
+          <input type="radio" name="hijos" id="1hijo" />
+          <label for="1hijo">1</label>
+        </div>
+        <div class="opciones">
+          <input type="radio" name="hijos" id="2hijos" />
+          <label for="2hijos">2</label>
+        </div>
+        <div class="opciones">
+          <input type="radio" name="hijos" id="3hijos" />
+          <label for="3hijos">3</label>
+        </div>
+        <div class="opciones">
+          <input type="radio" name="hijos" id="4hijos" />
+          <label for="4hijos">4</label>
+        </div>
+        <div class="opciones">
+          <input type="radio" name="hijos" id="5hijosOmas" />
+          <label for="5hijosOmas">5 o más</label>
+        </div>
+        <div class="opciones">
+          <input type="radio" name="hijos" id="noTengoHijos" />
+          <label for="noTengoHijos">No tengo hijos</label>
+        </div>
+      </div>
+    </div>
 
     <script>
       window.onload = () => {
@@ -126,7 +207,6 @@
         var birthday = document.getElementById("birthday").value;
 
         if (getAge(birthday) < 18) {
-
           //Diseñar un popUp para no mostrar los mensajes tan simples con un alert
           alert(
             "Muchas gracias por registrarte, actualmente el proceso de caracterización está dirigido a mayores de 18 años. Al aceptar los términos del manejo de datos, nos permitirás contactarte en el futuro"

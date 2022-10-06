@@ -1,81 +1,110 @@
-.formulario{
-    display: flex;
-    flex-direction: column;
-
-    background: rgba(182, 182, 248, 0.432);
-
-    
+.formulario {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: rgba(182, 182, 248, 0.432);
 }
 
-
-#light-bulb{
-    cursor: pointer;
-    position: relative;
+#light-bulb {
+  cursor: pointer;
+  position: relative;
 }
 #light-bulb:hover #pregunta3 {
-    visibility: visible;
+  visibility: visible;
 }
 
-#pregunta3{
-    position: absolute;
-    visibility: hidden;
-    top: 10px;
-    right: -4rem;
-    width: 8rem;
-    background-color: #cccccc;
-    color: white;
-    border-radius: .3rem;
-    padding: .5rem;
-
-    
+#pregunta3 {
+  position: absolute;
+  visibility: hidden;
+  top: 10px;
+  right: -4rem;
+  width: 8rem;
+  background-color: #cccccc;
+  color: white;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
 }
-#pregunta3::after{
-    content: '';
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
+#pregunta3::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
   border-color: transparent transparent #cccccc transparent;
-
-
-
 }
 
-
-#pensativa{
-    cursor: pointer;
-    position: relative;
+#pensativa {
+  cursor: pointer;
+  position: relative;
 }
 #pensativa:hover #pregunta4 {
-    visibility: visible;
+  visibility: visible;
 }
 
-#pregunta4{
-    position: absolute;
-    visibility: hidden;
-    top: 9px;
-    right: -7rem;
-    width: 15rem;
-    background-color: #cccccc;
-    color: white;
-    border-radius: .3rem;
-    padding: .5rem;
-
-    
+#pregunta4 {
+  position: absolute;
+  visibility: hidden;
+  top: 9px;
+  right: -7rem;
+  width: 15rem;
+  background-color: #cccccc;
+  color: white;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
 }
-#pregunta4::after{
-    content: '';
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
+#pregunta4::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
   border-color: transparent transparent #cccccc transparent;
+}
+
+.second {
+  margin: 1rem 0 0;
+  background: #d3d3d352;
+  
+}
+
+.cajas{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
 
 
+#interrogacion {
+  cursor: pointer;
+  position: relative;
+}
 
+#interrogacion:hover #pregunta5 {
+  visibility: visible;
+}
+#pregunta5 {
+  position: absolute;
+  visibility: hidden;
+  top: 10px;
+  right: -5rem;
+  width: 8rem;
+  background-color: #cccccc;
+  color: white;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+}
+#pregunta5::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #cccccc transparent;
 }
 
