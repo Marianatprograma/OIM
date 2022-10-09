@@ -65,7 +65,12 @@
   border-color: transparent transparent #cccccc transparent;
 }
 
-.second {
+.second{
+  margin: 1rem 0 0;
+  background: #d3d3d352;
+  
+}
+.ternary{
   margin: 1rem 0 0;
   background: #d3d3d352;
   
@@ -118,5 +123,33 @@
 }
 
 #elemento3{
+  display: none;
+}
+
+#elemento13A{
+  display: none;
+}
+#elemento13B{
+  display: none;
+}
+#elemento13C{
+  display: none;
+}
+#elemento13D{
+  display: none;
+}
+#elemento13E{
+  display: none;
+}
+#elemento13F{
+  display: none;
+}
+#elemento13G{
+  display: none;
+}
+#elemento13H{
+  display: none;
+}
+#elemento13I{
   display: none;
 }

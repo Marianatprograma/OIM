@@ -218,11 +218,16 @@
           </option>
         </select>
       </div>
+    </div>
+
+    <div class="ternary">
+      <h2>Parte 3, pero solo hice la pregunta 12, hacer la 10 y 11 y 111</h2>
+
       <div class="cajas">
         <label for="nivelEscolar">
           ¿Cuál es su último nivel escolar alcanzado?</label
         >
-        <select name="nivelEscolar" id="nivelEscolar" onchange="prueba()">
+        <select name="nivelEscolar" id="nivelEscolar" onchange="capturar()">
           <option hidden>--Seleccionar--</option>
           <option id="opcionA">Primaria completa</option>
           <option>Secundaria completa</option>
@@ -235,20 +240,144 @@
         </select>
       </div>
       <div class="cajas" id="elemento3">
-        <label for="estudio">¿Cuál es el campo de estudio de su último nivel escolar alcanzado?</label>
+        <label for="estudio"
+          >¿Cuál es el campo de estudio de su último nivel escolar
+          alcanzado?</label
+        >
         <select name="estudio" id="estudio">
           <option hidden>--Seleccionar--</option>
-          <option value="AGRONOMÍA, VETERINARIA Y AFINES">AGRONOMÍA, VETERINARIA Y AFINES</option>
+          <option value="AGRONOMÍA, VETERINARIA Y AFINES">
+            AGRONOMÍA, VETERINARIA Y AFINES
+          </option>
           <option value="BELLAS ARTES">BELLAS ARTES</option>
-          <option value="CIENCIAS DE LA EDUCACIÓN">CIENCIAS DE LA EDUCACIÓN</option>
+          <option value="CIENCIAS DE LA EDUCACIÓN">
+            CIENCIAS DE LA EDUCACIÓN
+          </option>
           <option value="CIENCIAS DE LA SALUD">CIENCIAS DE LA SALUD</option>
-          <option value="CIENCIAS SOCIALES Y HUMANAS">CIENCIAS SOCIALES Y HUMANAS</option>
-          <option value="ECONOMÍA, ADMINISTRACIÓN, CONTADURÍA Y AFINES">ECONOMÍA, ADMINISTRACIÓN, CONTADURÍA Y AFINES</option>
-          <option value="INGENIERÍA, ARQUITECTURA, URBANISMO Y AFINES">INGENIERÍA, ARQUITECTURA, URBANISMO Y AFINES</option>
-          <option value="MATEMÁTICAS Y CIENCIAS NATURALES">MATEMÁTICAS Y CIENCIAS NATURALES</option>
-
+          <option value="CIENCIAS SOCIALES Y HUMANAS">
+            CIENCIAS SOCIALES Y HUMANAS
+          </option>
+          <option value="ECONOMÍA, ADMINISTRACIÓN, CONTADURÍA Y AFINES">
+            ECONOMÍA, ADMINISTRACIÓN, CONTADURÍA Y AFINES
+          </option>
+          <option value="INGENIERÍA, ARQUITECTURA, URBANISMO Y AFINES">
+            INGENIERÍA, ARQUITECTURA, URBANISMO Y AFINES
+          </option>
+          <option value="MATEMÁTICAS Y CIENCIAS NATURALES">
+            MATEMÁTICAS Y CIENCIAS NATURALES
+          </option>
         </select>
       </div>
+    </div>
+
+    <div class="cuarta">
+      <h2>Esta es solo de la pregunta 13 y sus 5 derivadas</h2>
+      <div class="cajas">
+        <label for="laboralActual">¿Cuál es su situación laboral actual?</label>
+        <select name="laboralActual" id="laboralActual" onchange="abrir()">
+          <option hidden>--Seleccionar--</option>
+          <option value="Empleado">Empleado</option>
+          <option value="Negocio propio">Negocio propio</option>
+          <option value="Con discapacidad laboral, no puedo trabajar">
+            Con discapacidad laboral, no puedo trabajar
+          </option>
+          <option value="Jubilado (a)">Jubilado (a)</option>
+          <option value="Desempleado (a)">Desempleado (a)</option>
+        </select>
+      </div>
+
+      <div class="cajas" id="elemento13A">
+
+        <label for="contrato">¿Qué tipo de contrato tiene?</label>
+        <select name="contrato" id="contrato">
+          <option hidden>--Seleccionar--</option>
+          <option value="Término indefinido">Término indefinido</option>
+          <option value="Término fijo">Término fijo</option>
+          <option value="Prestación de servicios">Prestación de servicios</option>
+          <option value="Aprendizaje (pasantía, práctica educativa, entre otros)">Aprendizaje (pasantía, práctica educativa, entre otros)</option>
+          <option value="Por hora">Por hora</option>
+          <option value="No tengo contrato">No tengo contrato</option>
+        </select>
+
+
+      </div>
+      <div class="cajas" id="elemento13B">
+        <label for="cargo">En su empleo actual ¿cuál es el sector económico en el que se desempeña y qué cargo ocupa?</label>
+       <input type="text" name="cargo" id="cargo" maxlength="100"> 
+
+      </div>
+
+      <div class="cajas" id="elemento13C">
+
+        <label for="estadoLegal">¿Cuál es el estado legal de su negocio?</label>
+        <select name="estadoLegal" id="estadoLegal">
+          <option hidden>--Seleccionar--</option>
+          <option value="Único propietario, registrado formalmente en Colombia">Único propietario, registrado formalmente en Colombia</option>
+          <option value="Único propietario, registrado formalmente en el país de residencia">Único propietario, registrado formalmente en el país de residencia</option>
+          <option value="Sociedad, registrado formalmente en Colombia">Sociedad, registrado formalmente en Colombia</option>
+          <option value="Aprendizaje (pasantía, práctica educativa, entre otros)">Aprendizaje (pasantía, práctica educativa, entre otros)</option>
+          <option value="Sociedad, registrado formalmente en el país de residencia">Sociedad, registrado formalmente en el país de residencia</option>
+          <option value="No está constituído formalmente.">No está constituído formalmente.</option>
+        </select>
+
+
+      </div>
+      <div  class="cajas" id="elemento13D">
+        <label for="servicios">¿Cuál es el producto(s) o servicio(s) que ofrece?</label>
+        <input type="text" name="servicios" id="servicios" maxlength="100">
+      </div>
+
+      <div class="cajas" id="elemento13E">
+
+        <label for="empleados">Además de usted, ¿cuántos empleados tiene en su negocio?</label>
+        <select name="empleados" id="empleados">
+          <option hidden>--Seleccionar--</option>
+          <option value="10 o menos empleados">10 o menos empleados</option>
+          <option value="De 11 a 50 empleados">De 11 a 50 empleados</option>
+          <option value="Entre 51 y 200 empleados">Entre 51 y 200 empleados</option>
+          <option value="Más de 201 empleados">Más de 201 empleados</option>
+          <option value="No tengo empleados">No tengo empleados</option>
+        </select>
+      </div>
+      <div class="cajas" id="elemento13F">
+        <label for="operaciones">¿En qué país se encuentra la mayor parte de las operaciones/actividades de su empresa?</label>
+        <select name="operaciones" id="operaciones">
+          <option hidden>--Seleccionar--</option>
+          <option value="En Colombia">En Colombia</option>
+          <option value="En mi pais de residencia actual">En mi pais de residencia actual</option>
+          <option value="En mi país de residencia pero quiero ampliar mi negocio a Colombia">En mi país de residencia pero quiero ampliar mi negocio a Colombia</option>
+          <option value="En mi país pero no quiero ampliar mi negocio a Colombia">En mi país pero no quiero ampliar mi negocio a Colombia</option>
+        </select>
+      </div>
+
+      <div class="cajas" id="elemento13G">
+        <label for="ultimoEmpleo">	¿Cuál fue el cargo que ocupó en su último empleo?</label>
+        <input type="text" name="ultimoEmpleo" id="ultimoEmpleo" maxlength="50">
+      </div>
+
+      <div class="cajas" id="elemento13H">
+        <label for="tiempoDesempleo">¿Hace cuanto tiempo se encuentra desempleado ?</label>
+        <select name="tiempoDesempleo" id="tiempoDesempleo">
+          <option hidden>--Seleccionar--</option>
+          <option value="Menos de 6 meses">Menos de 6 meses</option>
+          <option value=" Entre 6 y 12 meses"> Entre 6 y 12 meses</option>
+          <option value="Más de 12 meses">Más de 12 meses</option>
+        </select>
+      </div>
+
+      <div class="cajas" id="elemento13I">
+        <label for="apoyo">¿Actualmente recibe algún tipo de apoyo por desempleo en el país de residencia?</label>
+        <select name="apoyo" id="apoyo">
+          <option hidden>--Seleccionar--</option>
+          <option value="Si, recibo apoyo económico">Si, recibo apoyo económico</option>
+          <option value="Si, recibo orientación para la búsqueda de empleo.">Si, recibo orientación para la búsqueda de empleo.</option>
+          <option value="">Si, recibo apoyo económico.</option>
+          <option value="Si, recibo apoyo económico y orientación para la búsqueda de empleo">Si, recibo apoyo económico y orientación para la búsqueda de empleo</option>
+          <option value="No, recibo ningún tipo de apoyo.">No, recibo ningún tipo de apoyo</option>
+          <option value="No puedo acceder a ese tipo de beneficios">No puedo acceder a ese tipo de beneficios</option>
+        </select>
+      </div>
+    
     </div>
 
     <script>
@@ -301,7 +430,7 @@
           : (document.getElementById("elemento2").style.display = "flex");
       };
 
-      const prueba = () => {
+      const capturar = () => {
         const select = document.getElementById("nivelEscolar");
 
         let valorOpcion = select.options[select.selectedIndex].value;
@@ -310,7 +439,6 @@
       };
 
       const showMore = (selectedOption) => {
-
         const opt1 = "Primaria completa";
         const opt2 = "Secundaria completa";
 
@@ -318,11 +446,75 @@
           case opt1:
             document.getElementById("elemento3").style.display = "none";
             break;
-            case opt2:
+          case opt2:
             document.getElementById("elemento3").style.display = "none";
             break;
           default:
             document.getElementById("elemento3").style.display = "flex";
+        }
+      };
+
+      const abrir = () => {
+        const escogido = document.getElementById("laboralActual");
+        let valorEscogido = escogido.options[escogido.selectedIndex].value;
+
+        const optA = "Empleado";
+        const optB = "Negocio propio";
+        const optE = "Desempleado (a)";
+
+        switch (valorEscogido) {
+          case optA:
+            console.log("Es empleado aparecer 13A- 13B 13C");
+            document.getElementById("elemento13A").style.display = "flex";
+            document.getElementById("elemento13B").style.display = "flex";
+            document.getElementById("elemento13C").style.display = "flex";
+            document.getElementById("elemento13D").style.display = "none";
+            document.getElementById("elemento13E").style.display = "none";
+            document.getElementById("elemento13F").style.display = "none";
+            document.getElementById("elemento13G").style.display = "none";
+            document.getElementById("elemento13H").style.display = "none";
+            document.getElementById("elemento13I").style.display = "none";
+
+            
+            break;
+            
+            case optB:
+            document.getElementById("elemento13A").style.display = "none";
+            document.getElementById("elemento13B").style.display = "none";
+            document.getElementById("elemento13C").style.display = "flex";
+            document.getElementById("elemento13D").style.display = "flex";
+            document.getElementById("elemento13E").style.display = "flex";
+            document.getElementById("elemento13F").style.display = "flex";
+            document.getElementById("elemento13G").style.display = "none";
+            document.getElementById("elemento13H").style.display = "none";
+            document.getElementById("elemento13I").style.display = "none";
+
+            console.log("Es Negocio propio aparecer 13C  13D 13E- 13F 13G");
+            break;
+          case optE:
+            console.log(" Es Desempleado aparece la 13G");
+            document.getElementById("elemento13A").style.display = "none";
+            document.getElementById("elemento13B").style.display = "none";
+            document.getElementById("elemento13C").style.display = "none";
+            document.getElementById("elemento13D").style.display = "none";
+            document.getElementById("elemento13E").style.display = "none";
+            document.getElementById("elemento13F").style.display = "none";
+            document.getElementById("elemento13G").style.display = "flex";
+            document.getElementById("elemento13H").style.display = "flex";
+            document.getElementById("elemento13I").style.display = "flex";
+            break;
+          default:
+            document.getElementById("elemento13A").style.display = "none";
+            document.getElementById("elemento13B").style.display = "none";
+            document.getElementById("elemento13C").style.display = "none";
+            document.getElementById("elemento13D").style.display = "none";
+            document.getElementById("elemento13E").style.display = "none";
+            document.getElementById("elemento13F").style.display = "none";
+            document.getElementById("elemento13G").style.display = "none";
+            document.getElementById("elemento13H").style.display = "none";
+            document.getElementById("elemento13I").style.display = "none";
+            console.log("Escogieron la opcion C o D");
+            //que continue y cambie de pantalla, no se que piensas.
         }
       };
     </script>
