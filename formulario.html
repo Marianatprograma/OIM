@@ -77,7 +77,8 @@
           <input
             type="radio"
             name="diaspora"
-            id="si-diaspora"
+            id="siDiaspora"
+            value="SiDiaspora"
             onclick="showInput()"
           />
           <label for="si-diaspora">Si</label>
@@ -89,7 +90,8 @@
           <input
             type="radio"
             name="diaspora"
-            id="no-diaspora"
+            id="noDiaspora"
+            value="noDiaspora"
             onclick="showInput()"
           />
           <label for="no-diaspora">No</label>
@@ -153,29 +155,38 @@
       <div class="cajas">
         <label for="hijos"> ¿Cuántos hijos tiene? </label>
         <div class="opciones">
-          <input type="radio" name="hijos" id="1hijo" />
+          <input type="radio" name="hijos" id="noTengoHijos" value="noTengoHijos" onclick="ShowNewPre()" checked/>
+          <label for="noTengoHijos">No tengo hijos</label>
+        </div>
+        <div class="opciones">
+          <input type="radio" name="hijos" " onclick="ShowNewPre()"  value="1hijo"/>
           <label for="1hijo">1</label>
         </div>
         <div class="opciones">
-          <input type="radio" name="hijos" id="2hijos" />
+          <input type="radio" name="hijos"  onclick="ShowNewPre()"  value="2hijos" />
           <label for="2hijos">2</label>
         </div>
         <div class="opciones">
-          <input type="radio" name="hijos" id="3hijos" />
+          <input type="radio" name="hijos" onclick="ShowNewPre()"  value="3hijos"/>
           <label for="3hijos">3</label>
         </div>
         <div class="opciones">
-          <input type="radio" name="hijos" id="4hijos" />
+          <input type="radio" name="hijos"   onclick="ShowNewPre()"   value="4hijos" />
           <label for="4hijos">4</label>
         </div>
         <div class="opciones">
-          <input type="radio" name="hijos" id="5hijosOmas" />
+          <input type="radio" name="hijos"  onclick="ShowNewPre()"  value="5hijosOmas"/>
           <label for="5hijosOmas">5 o más</label>
         </div>
-        <div class="opciones">
-          <input type="radio" name="hijos" id="noTengoHijos" />
-          <label for="noTengoHijos">No tengo hijos</label>
-        </div>
+      </div>
+      <div id="elemento2" class="cajas">
+        <label for="viven">¿ Viven con usted?</label>
+        <select name="viven" id="vivenhijos">
+        <option hidden>--Seleccionar--</option>
+        <option value="Si">Si</option>
+        <option value="No, viven en Colombia">No, viven en Colombia</option>
+        <option value="No, viven en otro país que no es Colombia">No, viven en otro país que no es Colombia</option>
+      </select>
       </div>
     </div>
 
@@ -198,7 +209,7 @@
       };
 
       const showInput = () => {
-        document.getElementById("si-diaspora").checked
+        document.getElementById("siDiaspora").checked
           ? (document.getElementById("elemento").style.display = "block")
           : (document.getElementById("elemento").style.display = "none");
       };
@@ -222,6 +233,15 @@
         var ageInMilliseconds = new Date() - new Date(dateString);
         return Math.floor(ageInMilliseconds / 1000 / 60 / 60 / 24 / 365);
       };
-    </script>
+
+
+      const ShowNewPre = () => {
+
+        document.getElementById("noTengoHijos").checked ?
+        document.getElementById("elemento2").style.display = "none": 
+        document.getElementById("elemento2").style.display = "flex";      
+
+      }
+      </script>
   </body>
 </html>
