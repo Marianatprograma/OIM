@@ -111,3 +111,12 @@
 #elemento2{
   display: none;
 }
+.opcionesNivel{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+}
+
+#elemento3{
+  display: none;
+}

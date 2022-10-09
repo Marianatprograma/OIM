@@ -155,38 +155,99 @@
       <div class="cajas">
         <label for="hijos"> ¿Cuántos hijos tiene? </label>
         <div class="opciones">
-          <input type="radio" name="hijos" id="noTengoHijos" value="noTengoHijos" onclick="ShowNewPre()" checked/>
+          <input
+            type="radio"
+            name="hijos"
+            id="noTengoHijos"
+            value="noTengoHijos"
+            onclick="ShowNewPre()"
+            checked
+          />
           <label for="noTengoHijos">No tengo hijos</label>
         </div>
         <div class="opciones">
-          <input type="radio" name="hijos" " onclick="ShowNewPre()"  value="1hijo"/>
+          <input type="radio" name="hijos" " onclick="ShowNewPre()"
+          value="1hijo"/>
           <label for="1hijo">1</label>
         </div>
         <div class="opciones">
-          <input type="radio" name="hijos"  onclick="ShowNewPre()"  value="2hijos" />
+          <input
+            type="radio"
+            name="hijos"
+            onclick="ShowNewPre()"
+            value="2hijos"
+          />
           <label for="2hijos">2</label>
         </div>
         <div class="opciones">
-          <input type="radio" name="hijos" onclick="ShowNewPre()"  value="3hijos"/>
+          <input
+            type="radio"
+            name="hijos"
+            onclick="ShowNewPre()"
+            value="3hijos"
+          />
           <label for="3hijos">3</label>
         </div>
         <div class="opciones">
-          <input type="radio" name="hijos"   onclick="ShowNewPre()"   value="4hijos" />
+          <input
+            type="radio"
+            name="hijos"
+            onclick="ShowNewPre()"
+            value="4hijos"
+          />
           <label for="4hijos">4</label>
         </div>
         <div class="opciones">
-          <input type="radio" name="hijos"  onclick="ShowNewPre()"  value="5hijosOmas"/>
+          <input
+            type="radio"
+            name="hijos"
+            onclick="ShowNewPre()"
+            value="5hijosOmas"
+          />
           <label for="5hijosOmas">5 o más</label>
         </div>
       </div>
       <div id="elemento2" class="cajas">
         <label for="viven">¿ Viven con usted?</label>
         <select name="viven" id="vivenhijos">
-        <option hidden>--Seleccionar--</option>
-        <option value="Si">Si</option>
-        <option value="No, viven en Colombia">No, viven en Colombia</option>
-        <option value="No, viven en otro país que no es Colombia">No, viven en otro país que no es Colombia</option>
-      </select>
+          <option hidden>--Seleccionar--</option>
+          <option value="Si">Si</option>
+          <option value="No, viven en Colombia">No, viven en Colombia</option>
+          <option value="No, viven en otro país que no es Colombia">
+            No, viven en otro país que no es Colombia
+          </option>
+        </select>
+      </div>
+      <div class="cajas">
+        <label for="nivelEscolar">
+          ¿Cuál es su último nivel escolar alcanzado?</label
+        >
+        <select name="nivelEscolar" id="nivelEscolar" onchange="prueba()">
+          <option hidden>--Seleccionar--</option>
+          <option id="opcionA">Primaria completa</option>
+          <option>Secundaria completa</option>
+          <option>Técnica</option>
+          <option>Tecnología</option>
+          <option>Profesional</option>
+          <option>Especialización</option>
+          <option>Maestría</option>
+          <option>Doctorado y postdoctorado</option>
+        </select>
+      </div>
+      <div class="cajas" id="elemento3">
+        <label for="estudio">¿Cuál es el campo de estudio de su último nivel escolar alcanzado?</label>
+        <select name="estudio" id="estudio">
+          <option hidden>--Seleccionar--</option>
+          <option value="AGRONOMÍA, VETERINARIA Y AFINES">AGRONOMÍA, VETERINARIA Y AFINES</option>
+          <option value="BELLAS ARTES">BELLAS ARTES</option>
+          <option value="CIENCIAS DE LA EDUCACIÓN">CIENCIAS DE LA EDUCACIÓN</option>
+          <option value="CIENCIAS DE LA SALUD">CIENCIAS DE LA SALUD</option>
+          <option value="CIENCIAS SOCIALES Y HUMANAS">CIENCIAS SOCIALES Y HUMANAS</option>
+          <option value="ECONOMÍA, ADMINISTRACIÓN, CONTADURÍA Y AFINES">ECONOMÍA, ADMINISTRACIÓN, CONTADURÍA Y AFINES</option>
+          <option value="INGENIERÍA, ARQUITECTURA, URBANISMO Y AFINES">INGENIERÍA, ARQUITECTURA, URBANISMO Y AFINES</option>
+          <option value="MATEMÁTICAS Y CIENCIAS NATURALES">MATEMÁTICAS Y CIENCIAS NATURALES</option>
+
+        </select>
       </div>
     </div>
 
@@ -234,14 +295,36 @@
         return Math.floor(ageInMilliseconds / 1000 / 60 / 60 / 24 / 365);
       };
 
-
       const ShowNewPre = () => {
+        document.getElementById("noTengoHijos").checked
+          ? (document.getElementById("elemento2").style.display = "none")
+          : (document.getElementById("elemento2").style.display = "flex");
+      };
 
-        document.getElementById("noTengoHijos").checked ?
-        document.getElementById("elemento2").style.display = "none": 
-        document.getElementById("elemento2").style.display = "flex";      
+      const prueba = () => {
+        const select = document.getElementById("nivelEscolar");
 
-      }
-      </script>
+        let valorOpcion = select.options[select.selectedIndex].value;
+
+        showMore(valorOpcion);
+      };
+
+      const showMore = (selectedOption) => {
+
+        const opt1 = "Primaria completa";
+        const opt2 = "Secundaria completa";
+
+        switch (selectedOption) {
+          case opt1:
+            document.getElementById("elemento3").style.display = "none";
+            break;
+            case opt2:
+            document.getElementById("elemento3").style.display = "none";
+            break;
+          default:
+            document.getElementById("elemento3").style.display = "flex";
+        }
+      };
+    </script>
   </body>
 </html>
