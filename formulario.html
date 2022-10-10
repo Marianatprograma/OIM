@@ -377,7 +377,114 @@
           <option value="No puedo acceder a ese tipo de beneficios">No puedo acceder a ese tipo de beneficios</option>
         </select>
       </div>
+
+
     
+    </div>
+
+
+    <div class="Quinta">
+
+      <h3> Pregunta 19 </h3>
+
+      <div class="cajas">
+        <label for="mudarse">¿Estaría dispuesto y en condiciones de mudarse a Colombia en un futuro próximo?</label>
+        <div class="opcionesCondiciones">
+
+          <input type="radio" name="condiciones" id="tiempoLargo" onclick="showOpt()">
+          <label for="tiempoLargo">SI, por un periodo de tiempo largo/indefinido</label>
+        </div>
+        
+        <div class="opcionesCondiciones">
+          <input type="radio" name="condiciones" id="tiempoCorto" onclick="showOpt()" >
+          <label for="tiempoCorto">SI, por un periodo de tiempo corto/definido</label>
+
+        </div>
+          
+        <div class="opcionesCondiciones">
+          <input type="radio" name="condiciones" id="noDispuesto" onclick="showOpt()">
+          <label for="noDispuesto">NO</label>
+        </div>
+
+        
+      </div>
+
+
+      <div class="cajas" id="elemento19A">
+        <label for="condiciones">¿Qué condiciones deberían darse antes de mudarse a Colombia?</label>
+        <p>Por favor, seleccione cada una de las condiciones que considere importantes para tomar su decisión.</p>
+        <div class="opcionCheck">
+          <input type="checkbox" name="seguridad">
+          <label for="">Mejora de la seguridad en el país</label>
+
+        </div>
+        <div class="opcionCheck">
+          <input type="checkbox" name="corrupcion" >
+          <label for="">Reducción de corrupción</label>
+
+        </div>
+        <div class="opcionCheck">
+          <input type="checkbox" name="proteccionJuridica" >
+          <label for="">Mejora del estado de derecho/protección jurídica</label>
+
+        </div>
+        <div class="opcionCheck">
+          <input type="checkbox" name="confianza" >
+          <label for="">Más confianza en el gobierno</label>
+
+        </div>
+        <div class="opcionCheck">
+          <input type="checkbox" name="servicios" >
+          <label for="">Mejora de servicios, incluyendo salud y educación</label>
+
+        </div>
+        <div class="opcionCheck">
+          <input type="checkbox" name="empleo" >
+          <label for="empleo">Empleo garantizado en Colombia</label>
+
+        </div>
+        <div class="opcionCheck">
+          <input type="checkbox" name="apoyoFinanciero" >
+          <label for="apoyoFinanciero">Apoyo financiero (p. ej. gastos de acomodación y viaje en avión)</label>
+
+        </div>
+        <div class="opcionCheck">
+          <input type="checkbox" name="accesoV" >
+          <label for="accesoV">Acceso a un vivienda</label>
+
+        </div>
+        <div class="opcionCheck">
+          <input type="checkbox" name="garantia" >
+          <label for="garantia">Garantía retomar trabajo en Colombia</label>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+        
+
+
+
+
+        
+      </div>
+
+
+
+
+
+
     </div>
 
     <script>
@@ -467,7 +574,7 @@
             console.log("Es empleado aparecer 13A- 13B 13C");
             document.getElementById("elemento13A").style.display = "flex";
             document.getElementById("elemento13B").style.display = "flex";
-            document.getElementById("elemento13C").style.display = "flex";
+            document.getElementById("elemento13C").style.display = "none";
             document.getElementById("elemento13D").style.display = "none";
             document.getElementById("elemento13E").style.display = "none";
             document.getElementById("elemento13F").style.display = "none";
@@ -517,6 +624,15 @@
             //que continue y cambie de pantalla, no se que piensas.
         }
       };
+
+
+
+      const showOpt = () =>{
+
+        document.getElementById("noDispuesto").checked  ? 
+        (document.getElementById("elemento19A").style.display = "none") : (document.getElementById("elemento19A").style.display = "flex");
+
+      }
     </script>
   </body>
 </html>

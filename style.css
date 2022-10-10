@@ -75,6 +75,10 @@
   background: #d3d3d352;
   
 }
+.Quinta{
+  margin: 1rem 0 0;
+  background: #d3d3d352;
+}
 
 .cajas{
     margin: 1rem;
@@ -151,5 +155,9 @@
   display: none;
 }
 #elemento13I{
+  display: none;
+}
+
+#elemento19A{
   display: none;
 }
