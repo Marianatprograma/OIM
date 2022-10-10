@@ -8,6 +8,9 @@
     <title>Formulario OIM</title>
   </head>
   <body>
+
+
+  
     <div class="formulario">
       <label for="birthday"> Seleccione su fecha de nacimiento </label>
 
@@ -167,44 +170,44 @@
         </div>
         <div class="opciones">
           <input type="radio" name="hijos" " onclick="ShowNewPre()"
-          value="1hijo"/>
-          <label for="1hijo">1</label>
+          id="unHijo"/>
+          <label for="unHijo">1</label>
         </div>
         <div class="opciones">
           <input
             type="radio"
             name="hijos"
             onclick="ShowNewPre()"
-            value="2hijos"
+            id="dosHijos"
           />
-          <label for="2hijos">2</label>
+          <label for="dosHijos">2</label>
         </div>
         <div class="opciones">
           <input
             type="radio"
             name="hijos"
             onclick="ShowNewPre()"
-            value="3hijos"
+            id="tresHijos"
           />
-          <label for="3hijos">3</label>
+          <label for="tresHijos">3</label>
         </div>
         <div class="opciones">
           <input
             type="radio"
             name="hijos"
             onclick="ShowNewPre()"
-            value="4hijos"
+            id="cuatroHijos"
           />
-          <label for="4hijos">4</label>
+          <label for="cuatroHijos">4</label>
         </div>
         <div class="opciones">
           <input
             type="radio"
             name="hijos"
             onclick="ShowNewPre()"
-            value="5hijosOmas"
+            id="cincoHijosOmas"
           />
-          <label for="5hijosOmas">5 o más</label>
+          <label for="cincoHijosOmas">5 o más</label>
         </div>
       </div>
       <div id="elemento2" class="cajas">
@@ -303,7 +306,7 @@
       </div>
       <div class="cajas" id="elemento13B">
         <label for="cargo">En su empleo actual ¿cuál es el sector económico en el que se desempeña y qué cargo ocupa?</label>
-       <input type="text" name="cargo" id="cargo" maxlength="100"> 
+       <input type="text" name="cargo" id="cargo" maxlength="70"> 
 
       </div>
 
@@ -324,7 +327,7 @@
       </div>
       <div  class="cajas" id="elemento13D">
         <label for="servicios">¿Cuál es el producto(s) o servicio(s) que ofrece?</label>
-        <input type="text" name="servicios" id="servicios" maxlength="100">
+        <input type="text" name="servicios" id="servicios" maxlength="70">
       </div>
 
       <div class="cajas" id="elemento13E">
@@ -387,7 +390,7 @@
 
       <h3> Pregunta 19 </h3>
 
-      <div class="cajas">
+      <div class="cajas" id="mudarse">
         <label for="mudarse">¿Estaría dispuesto y en condiciones de mudarse a Colombia en un futuro próximo?</label>
         <div class="opcionesCondiciones">
 
@@ -459,33 +462,54 @@
 
         </div>
 
-
-
-
-
-
-
-
-
-
-        
-
-
-
-        
-
-
-
-
-        
       </div>
 
 
 
 
+    </div>
+
+    <div class="sexta">
+
+      <h2> Pregunta 30 </h2>
+
+      <label for="">	¿Qué probabilidad habría de que usted vote en las próximas elecciones?</label>
+
+      <div class="container">
+        <div class="optionTitles">
+          <label for=""></label>
+          <label for="DefinitivamenteNo">Definitivamente no</label>
+          <label for="ProbablementeNo">Probablemente no</label>
+          <label for="ProbablementeSi">Probablemente si</label>
+          <label for="DefinitivamenteSi">Definitivamente si</label>
+        </div>
+        <div class="item" id="nacionalCol">
+          <div class="titulo">
+            <label for="nacionalCol"> Elecciones nacionales en Colombia </label>
+          </div>
+          <input type="radio" name="nacionalCol" id="DefinitivamenteNo" onclick="getInfo(this.name)">
+          <input type="radio" name="nacionalCol" id="ProbablementeNo" onclick="getInfo(this.name)">
+          <input type="radio" name="nacionalCol" id="ProbablementeSi" onclick="getInfo(this.name)">
+          <input type="radio" name="nacionalCol" id="DefinitivamenteSi" onclick="getInfo(this.name)">
+        </div>
+        <div class="item" id="nacionalResi">
+          <div class="titulo">
+            <label for="nacionalResi"> Elecciones nacionales del pais de residencia </label>
+          </div>
+          <input type="radio" name="nacionalResi" id="DefinitivamenteNo" onclick="getInfo(this.name)">
+          <input type="radio" name="nacionalResi" id="ProbablementeNo" onclick="getInfo(this.name)">
+          <input type="radio" name="nacionalResi" id="ProbablementeSi" onclick="getInfo(this.name)">
+          <input type="radio" name="nacionalResi" id="DefinitivamenteSi" onclick="getInfo(this.name)">
+        </div>
+
+      </div>
 
 
     </div>
+
+
+
+    
 
     <script>
       window.onload = () => {
@@ -504,6 +528,10 @@
 
         document.getElementById("elemento").style.display = "none";
       };
+
+      
+
+
 
       const showInput = () => {
         document.getElementById("siDiaspora").checked
@@ -532,6 +560,10 @@
       };
 
       const ShowNewPre = () => {
+
+       const resultado = getRadioGroup("hijos") // Este valor es el que se guarda en firebase y se ejecuta obvio en el boton guardar y continuar
+
+
         document.getElementById("noTengoHijos").checked
           ? (document.getElementById("elemento2").style.display = "none")
           : (document.getElementById("elemento2").style.display = "flex");
@@ -627,12 +659,50 @@
 
 
 
+      const getRadioGroup = (inputsName) =>{
+
+        //Funcion generica que permite obtener el valor del radio seleccionado
+
+        let checkedRadioValue = '';
+
+        const radioList = Array.from(document.getElementsByName(inputsName));
+
+        radioList.map((radio)=>{
+            if(radio.checked) {
+
+              const id = radio.getAttribute("id");
+              const info = document.querySelector(`label[for=${id}]`).innerText;
+              checkedRadioValue = info;              
+            }
+
+        });
+
+        return checkedRadioValue;
+        
+      }
+
       const showOpt = () =>{
+
+        const result = getRadioGroup("condiciones");
+
+        console.log(result);
 
         document.getElementById("noDispuesto").checked  ? 
         (document.getElementById("elemento19A").style.display = "none") : (document.getElementById("elemento19A").style.display = "flex");
 
+      };
+
+
+      const getInfo = (name) =>{
+
+        const infoRadio = getRadioGroup(name);
+
+        const valorLabel = document.querySelector(`label[for=${name}]`).innerText
+
+        console.log(valorLabel + ":" + infoRadio);
       }
+
+
     </script>
   </body>
 </html>
