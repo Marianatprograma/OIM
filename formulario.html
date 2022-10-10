@@ -504,7 +504,9 @@
         </div>
         <div class="opcionCheck">
           <input type="checkbox" name="proteccionJuridica" />
-          <label for="">Mejora del estado de derecho /protección jurídica</label>
+          <label for=""
+            >Mejora del estado de derecho /protección jurídica</label
+          >
         </div>
         <div class="opcionCheck">
           <input type="checkbox" name="confianza" />
@@ -1573,37 +1575,83 @@
       <h2>Pregunta 27</h2>
 
       <div class="cajas">
-        <label for="programaConocimientos">¿Le gustaría participar en un programa de transferencia de conocimientos y habilidades a personas de Colombia?</label>
+        <label for="programaConocimientos"
+          >¿Le gustaría participar en un programa de transferencia de
+          conocimientos y habilidades a personas de Colombia?</label
+        >
         <div class="opcionPrograma">
           <label for="siQuiero">Si</label>
-          <input type="radio" name="programaConocimientos" onclick="openPreg()" id="siQuiero">
+          <input
+            type="radio"
+            name="programaConocimientos"
+            onclick="openPreg()"
+            id="siQuiero"
+          />
         </div>
         <div class="opcionPrograma">
           <label for="noQuiero">No</label>
-          <input type="radio" name="programaConocimientos" id="noQuiero" onclick="openPreg()" >
+          <input
+            type="radio"
+            name="programaConocimientos"
+            id="noQuiero"
+            onclick="openPreg()"
+          />
         </div>
       </div>
 
       <div class="cajas" id="elemento27A">
-        <label for="tipoPrograma">¿En qué tipo de programa o iniciativa le interesaría participar?</label>
-        <input type="text" name="tipoPrograma" id="tipoPrograma">
+        <label for="tipoPrograma"
+          >¿En qué tipo de programa o iniciativa le interesaría
+          participar?</label
+        >
+        <input type="text" name="tipoPrograma" id="tipoPrograma" />
       </div>
 
       <div class="cajas" id="elemento27B">
         <label for="porqueNoQuiere">¿Por qué?</label>
-        <input type="text" name="porqueNoQuiere" id="porqueNoQuiere">
+        <input type="text" name="porqueNoQuiere" id="porqueNoQuiere" />
       </div>
-
-
-
 
       <h2>Pregunta 28</h2>
+      <h3>Participación</h3>
 
       <div class="cajas">
-        
+        <label for="ultimaEleccion"
+          >¿Usted votó en las últimas elecciones de Colombia?</label
+        >
+        <select name="ultimaEleccion" id="ultimaEleccion">
+          <option hidden>--Seleccionar--</option>
+          <option value="Si, sólo en las elecciones presidenciales">
+            Si, sólo en las elecciones presidenciales
+          </option>
+          <option value="Sí, en todas las elecciones nacionales">
+            Sí, en todas las elecciones nacionales
+          </option>
+          <option value="No, no tengo el derecho a votar">
+            No, no tengo el derecho a votar
+          </option>
+          <option value="No, elegí no votar">No, elegí no votar</option>
+        </select>
       </div>
-
       <h2>Pregunta 29</h2>
+      <div class="cajas">
+        <label for="ultimaEleccionResidencia"
+          >¿Usted votó en las últimas elecciones de Colombia?</label
+        >
+        <select name="ultimaEleccionResidencia" id="ultimaEleccionResidencia">
+          <option hidden>--Seleccionar--</option>
+          <option value="Si, sólo en las elecciones presidenciales">
+            Si, sólo en las elecciones presidenciales
+          </option>
+          <option value="Sí, en todas las elecciones nacionales">
+            Sí, en todas las elecciones nacionales
+          </option>
+          <option value="No, no tengo el derecho a votar">
+            No, no tengo el derecho a votar
+          </option>
+          <option value="No, elegí no votar">No, elegí no votar</option>
+        </select>
+      </div>
 
       <h2>Pregunta 30</h2>
 
@@ -1611,7 +1659,6 @@
         ¿Qué probabilidad habría de que usted vote en las próximas
         elecciones?</label
       >
-
 
       <div class="container">
         <div class="optionTitles">
@@ -1713,6 +1760,105 @@
           />
         </div>
       </div>
+    </div>
+
+    <div class="novena">
+      <h2>Pregunta 31</h2>
+
+      <h2>Pregunta 32</h2>
+
+      <h2>Pregunta 33</h2>
+
+      <div class="cajas">
+        <label for="">¿Es usted miembro de algún partido político?</label>
+        <select name="" id="">
+          <option
+            value="Sí, soy miembro activo de un partido político de Colombia"
+          >
+            Sí, soy miembro activo de un partido político de Colombia.
+          </option>
+          <option
+            value="Fui miembro activo de un partido político de Colombia, con el cambio de residencia no lo soy"
+          >
+            Fui miembro activo de un partido político de Colombia, con el cambio
+            de residencia no lo soy
+          </option>
+          <option
+            value="Sí, soy miembro activo de un partido político de mi país de residencia."
+          >
+            Sí, soy miembro activo de un partido político de mi país de
+            residencia.
+          </option>
+          <option value="No, nunca me ha interesado">
+            No, nunca me ha interesado
+          </option>
+          <option value="Prefiero no contestar">Prefiero no responder</option>
+        </select>
+      </div>
+
+      <h2>Pregunta 34</h2>
+
+      <div class="cajas">
+        <label for="organizaciones"
+          >¿Usted es miembro de alguna de las siguientes organizaciones?</label
+        >
+
+        <div class="opcionMiembro">
+          <input type="checkbox" name="organizaciones" id="concejo" />
+          <label for="concejo"
+            >Miembro de una organización o concejo de la diáspora
+            Colombiana</label
+          >
+        </div>
+
+        <div class="opcionMiembro">
+          <input type="checkbox" name="organizaciones" id="orgMigrantes" />
+          <label for="orgMigrantes"
+            >Miembro de una organización de migrantes en el país de
+            residencia</label
+          >
+        </div>
+        <div class="opcionMiembro">
+          <input type="checkbox" name="organizaciones" id="mGobierno" />
+          <label for="mGobierno">Miembro del gobierno en Colombia</label>
+        </div>
+        <div class="opcionMiembro">
+          <input
+            type="checkbox"
+            name="organizaciones"
+            id="gobiernoResidencia"
+          />
+          <label for="gobiernoResidencia"
+            >Miembro del gobierno de su país de residencia</label
+          >
+        </div>
+
+        <div class="opcionMiembro">
+          <input type="checkbox" name="organizaciones" id="sociedadCivil" />
+          <label for="sociedadCivil"
+            >Miembro de organizaciones de la sociedad civil</label
+          >
+        </div>
+        <div class="opcionMiembro">
+          <input
+            type="checkbox"
+            name="organizaciones"
+            id="otro"
+            onclick="mostrarCampo()"
+          />
+          <label for="otro"> Otro</label>
+        </div>
+
+        <div class="cajas" id="elementoCual">
+          <label for="cual">¿Cúal?</label>
+          <input type="text" name="cual" id="cual" />
+        </div>
+      </div>
+
+      <h2>Pregunta 35</h2>
+      <h2>Pregunta 36</h2>
+      <h2>Pregunta 37</h2>
+      <h2>Pregunta 38</h2>
     </div>
 
     <script>
@@ -1926,38 +2072,31 @@
       };
 
       const abrirPreg = () => {
-
-       
-        if(document.getElementById("siParticipar").checked){
-
+        if (document.getElementById("siParticipar").checked) {
           document.getElementById("elementos26Si").style.display = "flex";
           document.getElementById("elemento26D").style.display = "none";
-        
-        }else{
+        } else {
           document.getElementById("elemento26D").style.display = "flex";
           document.getElementById("elementos26Si").style.display = "none";
         }
       };
-      const openPreg = () =>{
-
-        if(document.getElementById("siQuiero").checked){
-
+      const openPreg = () => {
+        if (document.getElementById("siQuiero").checked) {
           document.getElementById("elemento27A").style.display = "flex";
           document.getElementById("elemento27B").style.display = "none";
-
-        }else{
+        } else {
           document.getElementById("elemento27A").style.display = "none";
           document.getElementById("elemento27B").style.display = "flex";
         }
+      };
 
+      const mostrarCampo = () => {
 
-      };  
+        (document.getElementById("otro").checked) ? 
+        (document.getElementById("elementoCual").style.display = "flex") : 
+        (document.getElementById("elementoCual").style.display = "none" );
 
-
-
-
-
-
+      };
     </script>
   </body>
 </html>
