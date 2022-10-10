@@ -965,12 +965,11 @@
       <h2>Pregunta 24</h2>
 
       <div class="cajas">
-
-
         <label for="propabilidadInvertir">
-          Si piensa en las diferentes formas de contribución financiera enumeradas
-          anteriormente, ¿cuál es la probabilidad de que invierta o haga
-          contribuciones financieras a Colombia en los próximos 12 meses?</label
+          Si piensa en las diferentes formas de contribución financiera
+          enumeradas anteriormente, ¿cuál es la probabilidad de que invierta o
+          haga contribuciones financieras a Colombia en los próximos 12
+          meses?</label
         >
         <select name="propabilidadInvertir" id="propabilidadInvertir">
           <option hidden>--Seleccionar--</option>
@@ -980,12 +979,586 @@
           <option value="Muy improbable">Muy improbable</option>
           <option value="No lo sé">No lo sé</option>
         </select>
-
       </div>
 
+      <h2>Pregunta 25</h2>
+      <h3>Contribuciones financieras</h3>
+
+      <div class="container4">
+        <label for="condicionesContribuir"
+          >En una escala de 1 a 4, seleccione por favor <br />
+          ¿Qué condiciones deben darse para que esté dispuesto(a) a contribuir o
+          continuar contribuyendo financieramente a Colombia en el
+          futuro?</label
+        >
+
+        <div class="optionTitles4">
+          <label for=""></label>
+          <label for="nadaNecesario">1-Nada necesario</label>
+          <label for="pocoNecesario">2-Poco necesario</label>
+          <label for="necesario">3-Necesario</label>
+          <label for="muyNecesario">4-Muy necesario</label>
+          <label for="noLoSePreNoContestar"
+            >No lo sé/ Prefiero no contestar</label
+          >
+        </div>
+
+        <div class="item4" id="seguridadPais">
+          <div class="titulo4">
+            <label for="seguridadPais"> Mejora en la seguridad del país </label>
+          </div>
+          <input
+            type="radio"
+            name="seguridadPais"
+            id="nadaNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="seguridadPais"
+            id="pocoNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="seguridadPais"
+            id="necesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="seguridadPais"
+            id="muyNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="seguridadPais"
+            id="noLoSePreNoContestar"
+            onclick="getInfo(this.name)"
+          />
+        </div>
+
+        <div class="item4" id="reduccionCorrupcion">
+          <div class="titulo4">
+            <label for="reduccionCorrupcion">
+              Reducción de corrupción en el país
+            </label>
+          </div>
+          <input
+            type="radio"
+            name="reduccionCorrupcion"
+            id="nadaNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="reduccionCorrupcion"
+            id="pocoNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="reduccionCorrupcion"
+            id="necesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="reduccionCorrupcion"
+            id="muyNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="reduccionCorrupcion"
+            id="noLoSePreNoContestar"
+            onclick="getInfo(this.name)"
+          />
+        </div>
+
+        <div class="item4" id="confianzaGobierno">
+          <div class="titulo4">
+            <label for="confianzaGobierno">
+              Más confianza en el gobierno
+            </label>
+          </div>
+          <input
+            type="radio"
+            name="confianzaGobierno"
+            id="nadaNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="confianzaGobierno"
+            id="pocoNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="confianzaGobierno"
+            id="necesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="confianzaGobierno"
+            id="muyNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="confianzaGobierno"
+            id="noLoSePreNoContestar"
+            onclick="getInfo(this.name)"
+          />
+        </div>
+
+        <div class="item4" id="estadoDerecho">
+          <div class="titulo4">
+            <label for="estadoDerecho">
+              Mejora del estado de derecho/protección jurídica
+            </label>
+          </div>
+          <input
+            type="radio"
+            name="estadoDerecho"
+            id="nadaNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="estadoDerecho"
+            id="pocoNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="estadoDerecho"
+            id="necesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="estadoDerecho"
+            id="muyNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="estadoDerecho"
+            id="noLoSePreNoContestar"
+            onclick="getInfo(this.name)"
+          />
+        </div>
+
+        <div class="item4" id="burocracia">
+          <div class="titulo4">
+            <label for="burocracia">
+              Mayor transparencia normativa/ menos burocracia
+            </label>
+          </div>
+          <input
+            type="radio"
+            name="burocracia"
+            id="nadaNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="burocracia"
+            id="pocoNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="burocracia"
+            id="necesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="burocracia"
+            id="muyNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="burocracia"
+            id="noLoSePreNoContestar"
+            onclick="getInfo(this.name)"
+          />
+        </div>
+
+        <div class="item4" id="reduccionTransaccion">
+          <div class="titulo4">
+            <label for="reduccionTransaccion">
+              Reducción del coste de las transacciones financieras, por ejemplo,
+              el envío de dinero/mercancías
+            </label>
+          </div>
+          <input
+            type="radio"
+            name="reduccionTransaccion"
+            id="nadaNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="reduccionTransaccion"
+            id="pocoNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="reduccionTransaccion"
+            id="necesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="reduccionTransaccion"
+            id="muyNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="reduccionTransaccion"
+            id="noLoSePreNoContestar"
+            onclick="getInfo(this.name)"
+          />
+        </div>
+
+        <div class="item4" id="rendimientoInversion">
+          <div class="titulo4">
+            <label for="rendimientoInversion">
+              Mayor rendimiento de la inversión
+            </label>
+          </div>
+          <input
+            type="radio"
+            name="rendimientoInversion"
+            id="nadaNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="rendimientoInversion"
+            id="pocoNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="rendimientoInversion"
+            id="necesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="rendimientoInversion"
+            id="muyNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="rendimientoInversion"
+            id="noLoSePreNoContestar"
+            onclick="getInfo(this.name)"
+          />
+        </div>
+
+        <div class="item4" id="oportunidadesInversion">
+          <div class="titulo4">
+            <label for="oportunidadesInversion">
+              Mejor conocimiento de las oportunidades de negocio/inversión
+            </label>
+          </div>
+          <input
+            type="radio"
+            name="oportunidadesInversion"
+            id="nadaNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="oportunidadesInversion"
+            id="pocoNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="oportunidadesInversion"
+            id="necesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="oportunidadesInversion"
+            id="muyNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="oportunidadesInversion"
+            id="noLoSePreNoContestar"
+            onclick="getInfo(this.name)"
+          />
+        </div>
+
+        <div class="item4" id="accesoApoyo">
+          <div class="titulo4">
+            <label for="accesoApoyo">
+              Acceso a tutorías u otros serivicios de apoyo
+            </label>
+          </div>
+          <input
+            type="radio"
+            name="accesoApoyo"
+            id="nadaNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="accesoApoyo"
+            id="pocoNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="accesoApoyo"
+            id="necesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="accesoApoyo"
+            id="muyNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="accesoApoyo"
+            id="noLoSePreNoContestar"
+            onclick="getInfo(this.name)"
+          />
+        </div>
+
+        <div class="item4" id="disponibilidadFamilia">
+          <div class="titulo4">
+            <label for="disponibilidadFamilia">
+            Disponibilidad de familiares, amigos o socios comerciales presentes en
+            </label>
+          </div>
+          <input
+            type="radio"
+            name="disponibilidadFamilia"
+            id="nadaNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="disponibilidadFamilia"
+            id="pocoNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="disponibilidadFamilia"
+            id="necesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="disponibilidadFamilia"
+            id="muyNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="disponibilidadFamilia"
+            id="noLoSePreNoContestar"
+            onclick="getInfo(this.name)"
+          />
+        </div>
+
+        <div class="item4" id="avalarTransacciones">
+          <div class="titulo4">
+            <label for="avalarTransacciones">
+              Estatus de residencia más seguro en mi pais de residencia para avalar transacciones
+            </label>
+          </div>
+          <input
+            type="radio"
+            name="avalarTransacciones"
+            id="nadaNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="avalarTransacciones"
+            id="pocoNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="avalarTransacciones"
+            id="necesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="avalarTransacciones"
+            id="muyNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="avalarTransacciones"
+            id="noLoSePreNoContestar"
+            onclick="getInfo(this.name)"
+          />
+        </div>
+
+        <div class="item4" id="trabajoSeguro">
+          <div class="titulo4">
+            <label for="trabajoSeguro">
+              Trabajo más seguro en mi país de residencia
+            </label>
+          </div>
+          <input
+            type="radio"
+            name="trabajoSeguro"
+            id="nadaNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="trabajoSeguro"
+            id="pocoNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="trabajoSeguro"
+            id="necesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="trabajoSeguro"
+            id="muyNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="trabajoSeguro"
+            id="noLoSePreNoContestar"
+            onclick="getInfo(this.name)"
+          />
+        </div>
+
+
+        <div class="item4" id="satisfechoActual">
+          <div class="titulo4">
+            <label for="satisfechoActual">
+              Nada para cambiar, estoy satisfecho con las condiciones actuales
+            </label>
+          </div>
+          <input
+            type="radio"
+            name="satisfechoActual"
+            id="nadaNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="satisfechoActual"
+            id="pocoNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="satisfechoActual"
+            id="necesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="satisfechoActual"
+            id="muyNecesario"
+            onclick="getInfo(this.name)"
+          />
+          <input
+            type="radio"
+            name="satisfechoActual"
+            id="noLoSePreNoContestar"
+            onclick="getInfo(this.name)"
+          />
+        </div>
+
+
+      </div>
     </div>
 
+
+
+
+
     <div class="octava">
+
+      <h3>Transferencia de conocimientos y habilidades</h3>
+
+      <h2> Pregunta 26 </h2>
+
+      <div class="cajas">
+        <label for="participacion">¿Desde que vive en el exterior, ha participado en alguna iniciativa de formación o capacitación de personas que viven en Colombia?</label>
+        <div class="opcionParticipar">
+          <input type="radio" name="participacion" id="siParticipar">
+          <label for="siParticipar">Si</label>
+
+        </div>
+        <div class="opcionParticipar">
+          <input type="radio" name="participacion" id="noParticipar">
+          <label for="noParticipar">No</label>
+
+        </div>
+      </div>
+
+
+
+
+
+
+      <h2> Pregunta 27 </h2>
+
+
+
+
+
+      <h2> Pregunta 28 </h2>
+
+
+
+
+      <h2> Pregunta 29 </h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <h2>Pregunta 30</h2>
 
       <label for="probablidad">

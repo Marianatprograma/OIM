@@ -182,6 +182,14 @@
   gap: 0.5rem;
   border-radius: 0.5rem;
 }
+.container4 {
+  background: hsl(0, 0%, 98%);
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+}
 .optionTitles {
   /* background: lightpink; */
   display: grid;
@@ -208,10 +216,19 @@
   align-items: center;
   overflow: hidden;
 }
-
+.optionTitles4 {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(1rem, 1fr));
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 .optionTitles label {
   display: flex;
   overflow: hidden;
+  font-size: small;
+
 }
 .optionTitles2 label {
   display: flex;
@@ -223,6 +240,13 @@
   display: flex;
   justify-self: center;
   overflow: hidden;
+
+}
+.optionTitles4 label {
+  display: flex;
+  justify-self: center;
+  overflow: hidden;
+  font-size: small;
 
 }
 .item {
@@ -255,7 +279,16 @@
   align-items: center;
   text-align: center;
 }
-
+.item4 {
+  padding: 0.2rem;
+  background-color: hsl(0, 0%, 90%);
+  display: grid;
+  grid-template-columns:repeat(6, minmax(1rem, 1fr));
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 .titulo {
   display: flex;
   justify-content: start;
@@ -274,7 +307,12 @@
   text-align: start;
 
 }
+.titulo4 {
+  display: flex;
+  justify-content: start;
+  text-align: start;
 
+}
 
 #elemento21A{
   display: none;
