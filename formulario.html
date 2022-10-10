@@ -84,7 +84,7 @@
             value="SiDiaspora"
             onclick="showInput()"
           />
-          <label for="si-diaspora">Si</label>
+          <label for="siDiaspora">Si</label>
           <div id="elemento">
             <input type="text" id="porque" placeholder="¿Por qué?" />
           </div>
@@ -374,7 +374,7 @@
           <option hidden>--Seleccionar--</option>
           <option value="Si, recibo apoyo económico">Si, recibo apoyo económico</option>
           <option value="Si, recibo orientación para la búsqueda de empleo.">Si, recibo orientación para la búsqueda de empleo.</option>
-          <option value="">Si, recibo apoyo económico.</option>
+          <option value="Si, recibo apoyo económico">Si, recibo apoyo económico</option>
           <option value="Si, recibo apoyo económico y orientación para la búsqueda de empleo">Si, recibo apoyo económico y orientación para la búsqueda de empleo</option>
           <option value="No, recibo ningún tipo de apoyo.">No, recibo ningún tipo de apoyo</option>
           <option value="No puedo acceder a ese tipo de beneficios">No puedo acceder a ese tipo de beneficios</option>
@@ -539,6 +539,60 @@
           <input type="radio" name="redInstitucional" id="otroPais" onclick="getInfo(this.name)">
         </div>
       </div>
+
+
+      <h2> Pregunta 21 </h2>
+
+      <div class="cajas"> 
+        <label for="discriminado">¿Se ha sentido alguna vez discriminado en su país de residencia actual?</label>
+        <div class="opcionDiscriminacion">
+          <input type="radio" name="discriminado" id="siDiscri" onclick="showSentir()">
+          <label for="siDiscri">Si</label>
+        </div>
+        <div class="opcionDiscriminacion">
+          <input type="radio" name="discriminado" id="noDiscri" onclick="showSentir()">
+          <label for="noDiscri">No</label>
+        </div>
+
+
+      </div>
+
+      <div class="cajas" id="elemento21A">
+        <label for="sentir">¿Qué le hizo sentirse así?</label>
+        <input type="text" name="sentir" id="sentir" maxlength="70">
+      </div>
+
+
+      <h2> Pregunta 22 </h2>
+      <div class="cajas">
+        <label for="frecuencia">¿Con qué frecuencia se informa de lo que ocurre en Colombia?</label>
+        <select name="frecuencia" id="frecuencia" onchange="abrirNuevo()">
+          <option hidden>--Seleccionar--</option>
+          <option value="Todos los días">Todos los días</option>
+          <option value="Cada semana">Cada semana</option>
+          <option value="Cada mes">Cada mes</option>
+          <option value="No me interesa saber/No me informo">No me interesa saber/No me informo</option>
+
+        </select>
+
+      </div>
+      <div class="cajas" id="elemento22A">
+
+        <label for="canalInfo">¿Cuáles canales utiliza para mantenerse informado?</label>
+        <select name="canalInfo" id="canalInfo">
+          <option hidden>--Seleccionar--</option>
+          <option value="Llamadas telefónicas con alguien que esté en Colombia">Llamadas telefónicas con alguien que esté en Colombia</option>
+          <option value="Redes sociales (Whatsapp, Instagram, Facebook, etc…)">Redes sociales (Whatsapp, Instagram, Facebook, etc…)</option>
+          <option value="Correo electrónico">Correo electrónico</option>
+          <option value="Sitios informativos en internet">Sitios informativos en internet</option>
+
+
+        </select>
+      </div>
+
+
+
+
 
 
 
@@ -791,7 +845,50 @@
         const valorLabel = document.querySelector(`label[for=${name}]`).innerText
 
         console.log(valorLabel + ":" + infoRadio);
-      }
+      };
+
+      const showSentir = () => {
+
+        const infor =  getInfo("discriminado");
+        
+        document.getElementById("siDiscri").checked ? 
+
+        document.getElementById("elemento21A").style.display = "flex" : document.getElementById("elemento21A").style.display = "none";
+
+
+      };
+
+      const abrirNuevo = () =>{
+
+        const opcionFre = document.getElementById("frecuencia");
+        let valorFre = opcionFre.options[opcionFre.selectedIndex].value;
+        console.log(valorFre);
+
+        const optFre1 = "Todos los días";
+        const optFre2 = "Cada semana";
+        const optFre3 = "Cada mes";
+        const optFre4 = "No me interesa saber/No me informo";
+
+
+        switch(valorFre){
+
+          case optFre1: 
+          document.getElementById("elemento22A").style.display = "flex";
+          break;
+          case optFre2: 
+          document.getElementById("elemento22A").style.display = "flex";
+          break;
+          case optFre3: 
+          document.getElementById("elemento22A").style.display = "flex";
+          break;
+          default: 
+          document.getElementById("elemento22A").style.display = "none";
+           
+        };
+      };
+
+
+      
 
 
     </script>
