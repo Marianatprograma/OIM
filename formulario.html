@@ -504,7 +504,7 @@
         </div>
         <div class="opcionCheck">
           <input type="checkbox" name="proteccionJuridica" />
-          <label for="">Mejora del estado de derecho/protección jurídica</label>
+          <label for="">Mejora del estado de derecho /protección jurídica</label>
         </div>
         <div class="opcionCheck">
           <input type="checkbox" name="confianza" />
@@ -1118,7 +1118,7 @@
         <div class="item4" id="estadoDerecho">
           <div class="titulo4">
             <label for="estadoDerecho">
-              Mejora del estado de derecho/protección jurídica
+              Mejora del estado de derecho /protección jurídica
             </label>
           </div>
           <input
@@ -1195,7 +1195,7 @@
           <div class="titulo4">
             <label for="reduccionTransaccion">
               Reducción del coste de las transacciones financieras, por ejemplo,
-              el envío de dinero/mercancías
+              el envío de dinero /mercancías
             </label>
           </div>
           <input
@@ -1271,7 +1271,7 @@
         <div class="item4" id="oportunidadesInversion">
           <div class="titulo4">
             <label for="oportunidadesInversion">
-              Mejor conocimiento de las oportunidades de negocio/inversión
+              Mejor conocimiento de las oportunidades de negocio /inversión
             </label>
           </div>
           <input
@@ -1347,7 +1347,8 @@
         <div class="item4" id="disponibilidadFamilia">
           <div class="titulo4">
             <label for="disponibilidadFamilia">
-            Disponibilidad de familiares, amigos o socios comerciales presentes en
+              Disponibilidad de familiares, amigos o socios comerciales
+              presentes en Colombia
             </label>
           </div>
           <input
@@ -1385,7 +1386,8 @@
         <div class="item4" id="avalarTransacciones">
           <div class="titulo4">
             <label for="avalarTransacciones">
-              Estatus de residencia más seguro en mi pais de residencia para avalar transacciones
+              Estatus de residencia más seguro en mi pais de residencia para
+              avalar transacciones
             </label>
           </div>
           <input
@@ -1458,7 +1460,6 @@
           />
         </div>
 
-
         <div class="item4" id="satisfechoActual">
           <div class="titulo4">
             <label for="satisfechoActual">
@@ -1496,68 +1497,113 @@
             onclick="getInfo(this.name)"
           />
         </div>
-
-
       </div>
     </div>
 
-
-
-
-
     <div class="octava">
-
       <h3>Transferencia de conocimientos y habilidades</h3>
 
-      <h2> Pregunta 26 </h2>
+      <h2>Pregunta 26</h2>
 
       <div class="cajas">
-        <label for="participacion">¿Desde que vive en el exterior, ha participado en alguna iniciativa de formación o capacitación de personas que viven en Colombia?</label>
+        <label for="participacion"
+          >¿Desde que vive en el exterior, ha participado en alguna iniciativa
+          de formación o capacitación de personas que viven en Colombia?</label
+        >
         <div class="opcionParticipar">
-          <input type="radio" name="participacion" id="siParticipar">
+          <input
+            type="radio"
+            name="participacion"
+            id="siParticipar"
+            onclick="abrirPreg()"
+          />
           <label for="siParticipar">Si</label>
-
         </div>
         <div class="opcionParticipar">
-          <input type="radio" name="participacion" id="noParticipar">
+          <input
+            type="radio"
+            name="participacion"
+            id="noParticipar"
+            onclick="abrirPreg()"
+          />
           <label for="noParticipar">No</label>
-
         </div>
+      </div>
+
+      <div id="elementos26Si">
+        <div class="cajas" id="elemento26A">
+          <label for="frecuenciaParticipacion"
+            >¿Con qué frecuencia ha participado en alguna iniciativa de
+            formación o capacitación de personas que viven en Colombia en el
+            último año?</label
+          >
+          <select name="frecuenciaParticipacion" id="frecuenciaParticipacion">
+            <option hidden>--Seleccionar--</option>
+            <option value="Sólo una vez">Sólo una vez</option>
+            <option value="Dos veces">Dos veces</option>
+            <option value="Tres veces">Tres veces</option>
+            <option value="Más de tres veces">Más de tres veces</option>
+          </select>
+
+          <div class="cajas" id="elemento26B">
+            <label for="habilidades"
+              >¿Qué tipo de habilidades o conocimientos compartió?</label
+            >
+            <input
+              type="text"
+              name="habilidades"
+              id="habilidades"
+              maxlength="70"
+            />
+          </div>
+
+          <div class="cajas" id="elemento26C">
+            <label for="motivo"
+              >¿Qué lo motivó a participar de estos espacios?</label
+            >
+            <input type="text" name="motivo" id="motivo" maxlength="70" />
+          </div>
+        </div>
+      </div>
+      <div class="cajas" id="elemento26D">
+        <label for="porqueNo">¿Por qué?</label>
+        <input type="text" name="porqueNo" id="porqueNo" maxlength="70" />
+      </div>
+
+      <h2>Pregunta 27</h2>
+
+      <div class="cajas">
+        <label for="programaConocimientos">¿Le gustaría participar en un programa de transferencia de conocimientos y habilidades a personas de Colombia?</label>
+        <div class="opcionPrograma">
+          <label for="siQuiero">Si</label>
+          <input type="radio" name="programaConocimientos" onclick="openPreg()" id="siQuiero">
+        </div>
+        <div class="opcionPrograma">
+          <label for="noQuiero">No</label>
+          <input type="radio" name="programaConocimientos" id="noQuiero" onclick="openPreg()" >
+        </div>
+      </div>
+
+      <div class="cajas" id="elemento27A">
+        <label for="tipoPrograma">¿En qué tipo de programa o iniciativa le interesaría participar?</label>
+        <input type="text" name="tipoPrograma" id="tipoPrograma">
+      </div>
+
+      <div class="cajas" id="elemento27B">
+        <label for="porqueNoQuiere">¿Por qué?</label>
+        <input type="text" name="porqueNoQuiere" id="porqueNoQuiere">
       </div>
 
 
 
 
+      <h2>Pregunta 28</h2>
 
+      <div class="cajas">
+        
+      </div>
 
-      <h2> Pregunta 27 </h2>
-
-
-
-
-
-      <h2> Pregunta 28 </h2>
-
-
-
-
-      <h2> Pregunta 29 </h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <h2>Pregunta 29</h2>
 
       <h2>Pregunta 30</h2>
 
@@ -1565,6 +1611,7 @@
         ¿Qué probabilidad habría de que usted vote en las próximas
         elecciones?</label
       >
+
 
       <div class="container">
         <div class="optionTitles">
@@ -1877,6 +1924,40 @@
             document.getElementById("elemento22A").style.display = "none";
         }
       };
+
+      const abrirPreg = () => {
+
+       
+        if(document.getElementById("siParticipar").checked){
+
+          document.getElementById("elementos26Si").style.display = "flex";
+          document.getElementById("elemento26D").style.display = "none";
+        
+        }else{
+          document.getElementById("elemento26D").style.display = "flex";
+          document.getElementById("elementos26Si").style.display = "none";
+        }
+      };
+      const openPreg = () =>{
+
+        if(document.getElementById("siQuiero").checked){
+
+          document.getElementById("elemento27A").style.display = "flex";
+          document.getElementById("elemento27B").style.display = "none";
+
+        }else{
+          document.getElementById("elemento27A").style.display = "none";
+          document.getElementById("elemento27B").style.display = "flex";
+        }
+
+
+      };  
+
+
+
+
+
+
     </script>
   </body>
 </html>
