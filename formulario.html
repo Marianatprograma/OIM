@@ -386,7 +386,7 @@
     </div>
 
 
-    <div class="Quinta">
+    <div class="quinta">
 
       <h3> Pregunta 19 </h3>
 
@@ -469,11 +469,93 @@
 
     </div>
 
+
     <div class="sexta">
+      <h2> Pregunta 20 </h2>
+
+      <label for="redApoyo">¿Dónde viven los miembros de su red de apoyo?</label>
+
+      <div class="container2">
+        <div class="optionTitles2">
+          <label for=""></label>
+          <label for="paisDeResidencia">Pais de residencia</label>
+          <label for="colombia">Colombia</label>
+          <label for="otroPais">Otro país</label>
+        </div>
+        <div class="item2" id="pareja">
+          <div class="titulo2">
+            <label for="pareja"> Pareja sentimental </label>
+          </div>
+          <input type="radio" name="pareja" id="paisDeResidencia" onclick="getInfo(this.name)">
+          <input type="radio" name="pareja" id="colombia" onclick="getInfo(this.name)">
+          <input type="radio" name="pareja" id="otroPais" onclick="getInfo(this.name)">
+        </div>
+        <div class="item2" id="hiijos">
+          <div class="titulo2">
+            <label for="hiijos"> Hijo(s)  </label>
+          </div>
+          <input type="radio" name="hiijos" id="paisDeResidencia" onclick="getInfo(this.name)">
+          <input type="radio" name="hiijos" id="colombia" onclick="getInfo(this.name)">
+          <input type="radio" name="hiijos" id="otroPais" onclick="getInfo(this.name)">
+        </div>
+        <div class="item2" id="padres">
+          <div class="titulo2">
+            <label for="padres"> Padre(s)  </label>
+          </div>
+          <input type="radio" name="padres" id="paisDeResidencia" onclick="getInfo(this.name)">
+          <input type="radio" name="padres" id="colombia" onclick="getInfo(this.name)">
+          <input type="radio" name="padres" id="otroPais" onclick="getInfo(this.name)">
+        </div>
+        <div class="item2" id="hermanos">
+          <div class="titulo2">
+            <label for="hermanos"> Hermano(s)  </label>
+          </div>
+          <input type="radio" name="hermanos" id="paisDeResidencia" onclick="getInfo(this.name)">
+          <input type="radio" name="hermanos" id="colombia" onclick="getInfo(this.name)">
+          <input type="radio" name="hermanos" id="otroPais" onclick="getInfo(this.name)">
+        </div>
+        <div class="item2" id="familiaExtendida">
+          <div class="titulo2">
+            <label for="familiaExtendida">Familia extendida(tíos, tías, primos, abuelos, entre otros)  </label>
+          </div>
+          <input type="radio" name="familiaExtendida" id="paisDeResidencia" onclick="getInfo(this.name)">
+          <input type="radio" name="familiaExtendida" id="colombia" onclick="getInfo(this.name)">
+          <input type="radio" name="familiaExtendida" id="otroPais" onclick="getInfo(this.name)">
+        </div>
+        <div class="item2" id="amigos">
+          <div class="titulo2">
+            <label for="amigos"> Amigos </label>
+          </div>
+          <input type="radio" name="amigos" id="paisDeResidencia" onclick="getInfo(this.name)">
+          <input type="radio" name="amigos" id="colombia" onclick="getInfo(this.name)">
+          <input type="radio" name="amigos" id="otroPais" onclick="getInfo(this.name)">
+        </div>
+        <div class="item2" id="redInstitucional">
+          <div class="titulo2">
+            <label for="redInstitucional"> Red de apoyo institucional (programas gubernamentales de apoyo social, económico, cultural) </label>
+          </div>
+          <input type="radio" name="redInstitucional" id="paisDeResidencia" onclick="getInfo(this.name)">
+          <input type="radio" name="redInstitucional" id="colombia" onclick="getInfo(this.name)">
+          <input type="radio" name="redInstitucional" id="otroPais" onclick="getInfo(this.name)">
+        </div>
+      </div>
+
+
+
+
+
+      
+
+    </div>
+
+
+
+
+    <div class="septima">
 
       <h2> Pregunta 30 </h2>
 
-      <label for="">	¿Qué probabilidad habría de que usted vote en las próximas elecciones?</label>
+      <label for="probablidad">	¿Qué probabilidad habría de que usted vote en las próximas elecciones?</label>
 
       <div class="container">
         <div class="optionTitles">
@@ -500,6 +582,15 @@
           <input type="radio" name="nacionalResi" id="ProbablementeNo" onclick="getInfo(this.name)">
           <input type="radio" name="nacionalResi" id="ProbablementeSi" onclick="getInfo(this.name)">
           <input type="radio" name="nacionalResi" id="DefinitivamenteSi" onclick="getInfo(this.name)">
+        </div>
+        <div class="item" id="municipalesResi">
+          <div class="titulo">
+            <label for="municipalesResi"> Elecciones municipales o de ciudad del pais de residencia </label>
+          </div>
+          <input type="radio" name="municipalesResi" id="DefinitivamenteNo" onclick="getInfo(this.name)">
+          <input type="radio" name="municipalesResi" id="ProbablementeNo" onclick="getInfo(this.name)">
+          <input type="radio" name="municipalesResi" id="ProbablementeSi" onclick="getInfo(this.name)">
+          <input type="radio" name="municipalesResi" id="DefinitivamenteSi" onclick="getInfo(this.name)">
         </div>
 
       </div>
