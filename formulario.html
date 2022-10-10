@@ -793,7 +793,8 @@
       <h2>Pregunta 23</h2>
       <label for="contribuciones"
         >Por favor seleccione las contribuciones financieras que ha hecho a
-        Colombia en los últimos 12 meses.</label>
+        Colombia en los últimos 12 meses.</label
+      >
       <div class="container3">
         <div class="optionTitles3">
           <label for=""></label>
@@ -866,7 +867,7 @@
           <div class="titulo3">
             <label for="negocio">
               Empezando o continuando con el manejo de un negocio
-              </label>
+            </label>
           </div>
           <input
             type="radio"
@@ -885,7 +886,7 @@
           <div class="titulo3">
             <label for="cuentaBancaria">
               Abierto o sido propietario de una cuentaBancaria
-              </label>
+            </label>
           </div>
           <input
             type="radio"
@@ -904,7 +905,7 @@
           <div class="titulo3">
             <label for="propietarioVivienda">
               Comprado o siguió siendo propietario de una viviendo o tierra
-              </label>
+            </label>
           </div>
           <input
             type="radio"
@@ -922,8 +923,9 @@
         <div class="item3" id="propietarioAcciones">
           <div class="titulo3">
             <label for="propietarioAcciones">
-              Comprado o siguió siendo propietario de acciones, bono u otras inversiones
-              </label>
+              Comprado o siguió siendo propietario de acciones, bono u otras
+              inversiones
+            </label>
           </div>
           <input
             type="radio"
@@ -943,7 +945,7 @@
           <div class="titulo3">
             <label for="cotizaPension">
               Cotizado al fondo de pensiones en Colombia
-              </label>
+            </label>
           </div>
           <input
             type="radio"
@@ -958,8 +960,29 @@
             onclick="getInfo(this.name)"
           />
         </div>
+      </div>
+
+      <h2>Pregunta 24</h2>
+
+      <div class="cajas">
+
+
+        <label for="propabilidadInvertir">
+          Si piensa en las diferentes formas de contribución financiera enumeradas
+          anteriormente, ¿cuál es la probabilidad de que invierta o haga
+          contribuciones financieras a Colombia en los próximos 12 meses?</label
+        >
+        <select name="propabilidadInvertir" id="propabilidadInvertir">
+          <option hidden>--Seleccionar--</option>
+          <option value="Muy probable">Muy probable</option>
+          <option value="Probable">Probable</option>
+          <option value="Improbable">Improbable</option>
+          <option value="Muy improbable">Muy improbable</option>
+          <option value="No lo sé">No lo sé</option>
+        </select>
 
       </div>
+
     </div>
 
     <div class="octava">
