@@ -1580,22 +1580,22 @@
           conocimientos y habilidades a personas de Colombia?</label
         >
         <div class="opcionPrograma">
-          <label for="siQuiero">Si</label>
           <input
-            type="radio"
-            name="programaConocimientos"
-            onclick="openPreg()"
-            id="siQuiero"
+          type="radio"
+          name="programaConocimientos"
+          onclick="openPreg()"
+          id="siQuiero"
           />
+          <label for="siQuiero">Si</label>
         </div>
         <div class="opcionPrograma">
-          <label for="noQuiero">No</label>
           <input
-            type="radio"
-            name="programaConocimientos"
-            id="noQuiero"
-            onclick="openPreg()"
+          type="radio"
+          name="programaConocimientos"
+          id="noQuiero"
+          onclick="openPreg()"
           />
+          <label for="noQuiero">No</label>
         </div>
       </div>
 
@@ -1772,6 +1772,9 @@
       <div class="cajas">
         <label for="">¿Es usted miembro de algún partido político?</label>
         <select name="" id="">
+
+          <option hidden>--Seleccionar--</option>
+          
           <option
             value="Sí, soy miembro activo de un partido político de Colombia"
           >
@@ -1856,7 +1859,140 @@
       </div>
 
       <h2>Pregunta 35</h2>
+
+      <div class="cajas">
+
+        <label for="actividadesCol">Desde que vive en el extranjero, ¿ha participado en alguna de las siguientes actividades relacionadas con Colombia?</label>
+        <div class="opcionExtranjero">
+          <input type="checkbox" name="actividadesCol" id="campanaLinea" onclick="mostrarMas()">
+          <label for="campanaLinea">Campaña en línea (por ejemplo, campañas electorales)</label>
+        </div>
+        <div class="opcionExtranjero">
+
+          <input type="checkbox" name="actividadesCol" id="campanaOff" onclick="mostrarMas()">
+          <label for="campanaOff">Campaña offline (por ejemplo, campañas electorales)</label>
+        </div>
+        <div class="opcionExtranjero">
+
+          <input type="checkbox" name="actividadesCol" id="firmaPeticiones" onclick="mostrarMas()">
+          <label for="firmaPeticiones">Firma de peticiones</label>
+        </div>
+        <div class="opcionExtranjero">
+
+          <input type="checkbox" name="actividadesCol" id="reunirseGob" onclick="mostrarMas()">
+          <label for="reunirseGob">Reunirse con representantes del gobierno de Colombia para influir en la toma de decisiones</label>
+        </div>
+        <div class="opcionExtranjero">
+
+          <input type="checkbox" name="actividadesCol" id="reunirseResi" onclick="mostrarMas()">
+          <label for="reunirseResi">Reunirse con representantes del gobierno de su país de residencia para influir en la toma de decisiones</label>
+        </div>
+        <div class="opcionExtranjero">
+
+          <input type="checkbox" name="actividadesCol" id="conocerDerechos" onclick="mostrarMas()">
+          <label for="conocerEvolucion">Actos para dar a conocer la evolución y la situación de Colombia (por ejemplo, actos informativos, charlas públicas, rondas de debate)</label>
+        </div>
+        <div class="opcionExtranjero">
+
+          <input type="checkbox" name="actividadesCol" id="conocerDerechos" onclick="mostrarMas()">
+          <label for="conocerDerechos">Actos para dar a conocer los derechos de su comunidad en país de residencia (por ejemplo, actos informativos, charlas públicas, rondas de debate)</label>
+        </div>
+        <div class="opcionExtranjero">
+
+          <input type="checkbox" name="actividadesCol" id="donacionCol" onclick="mostrarMas()">
+          <label for="donacionCol">Donaciones a las actividades de ayuda para Colombia</label>
+        </div>
+        <div class="opcionExtranjero">
+
+          <input type="checkbox" name="actividadesCol" id="donacionResi" onclick="mostrarMas()">
+          <label for="donacionResi">Donaciones a las actividades de ayuda para su país de residencia</label>
+        </div>
+        
+        <div class="opcionExtranjero">
+
+          <input type="checkbox" name="actividadesCol" id="manifestacionCol" onclick="mostrarMas()">
+          <label for="manifestacionCol">Manifestación por situaciones o hechos que pasen en Colombia</label>
+        </div>
+        <div class="opcionExtranjero">
+
+          <input type="checkbox" name="actividadesCol" id="manifestacionResi" onclick="mostrarMas()">
+          <label for="manifestacionResi">Manifestación por situaciones o hechos que pasan en el país de residencia</label>
+        </div>
+        <div class="opcionExtranjero">
+          <input type="checkbox" name="actividadesCol" id="nunca" onclick="mostrarMas()">
+          <label for="nunca">Nunca he participado en este tipo de actividades.</label>
+        </div>
+
+      </div>
+
+
+      <div class="cajas" id="elemento35A">
+        <h4> 35A </h4>
+        
+        <label for="motivoParticipacion">¿Qué le motivó a participar en las actividades mencionadas anteriormente? Por favor, seleccione todas las que correspondan</label>
+      
+        <div class="opcionesMotivo">
+
+          <input type="checkbox" name="motivoParticipacion" id="cambioReal">
+          <label for="cambioReal">Quiero contribuir a un cambio real en Colombia</label>
+        </div>
+        <div class="opcionesMotivo">
+
+          <input type="checkbox" name="motivoParticipacion" id="cambioReal">
+          <label for="cambioReal">Quiero contribuir a un cambio real en Colombia</label>
+        </div>
+        <div class="opcionesMotivo">
+
+          <input type="checkbox" name="motivoParticipacion" id="sensibilizar">
+          <label for="sensibilizar"> Quiero sensibilizar sobre los retos a los que se enfrenta mi comunidad en el país de residencia</label>
+        </div>
+        <div class="opcionesMotivo">
+
+          <input type="checkbox" name="motivoParticipacion" id="acontecimientosCol" onclick="getAcont()">
+          <label for="acontecimientosCol">Acontecimientos específicos en Colombia</label>
+        </div>
+        <div class="opcionesMotivo">
+
+          <input type="checkbox" name="motivoParticipacion" id="acontecimientosResi" onclick="getAcont()">
+          <label for="acontecimientosResi">Acontecimientos específicos en país de residencia</label>
+        </div>
+        <div class="opcionesMotivo">
+
+          <input type="checkbox" name="motivoParticipacion" id="yaEraActivo">
+          <label for="yaEraActivo">Ya era activo antes de salir de Colombia, participar políticamente siempre fue importante para mí</label>
+        </div>
+        <div class="opcionesMotivo">
+          <input type="checkbox" name="motivoParticipacion" id="otrosMotivos" onclick="mostrarOtro()" >
+          <label for="otrosMotivos">Otros</label>
+        </div>
+
+
+        <div class="cajas" id="cualDos">
+          <label for="cual2">¿Cúal?</label>
+          <input type="text" name="cual2" id="cual2">
+        </div>
+
+        <div class="cajas" id="acontecimientosEspe">
+          
+          <label for="aconteEspe">Por favor, especifique algunos de esos acontecimientos</label>
+          <input type="text" name="aconteEspe" id="aconteEspe">
+        </div>
+
+      </div>
+
+      <div class="cajas" id="elemento35B">
+        <label for="porque2">¿Por qué?</label>
+        <input type="text" name="porque2" id="porque2">
+      </div>
+
+
+
+
+
       <h2>Pregunta 36</h2>
+
+
+
       <h2>Pregunta 37</h2>
       <h2>Pregunta 38</h2>
     </div>
@@ -2097,6 +2233,38 @@
         (document.getElementById("elementoCual").style.display = "none" );
 
       };
+
+      const mostrarMas = () =>{
+
+        if(document.getElementById("nunca").checked){
+
+          document.getElementById("elemento35A").style.display = "none";
+          document.getElementById("elemento35B").style.display = "flex";
+        }else{
+          document.getElementById("elemento35A").style.display = "flex"; 
+          document.getElementById("elemento35B").style.display = "none";
+          
+        }
+
+
+      }
+
+      const getAcont = () =>{
+
+        document.getElementById("acontecimientosCol").checked || 
+        document.getElementById("acontecimientosResi").checked ? document.getElementById("acontecimientosEspe").style.display = "flex" : 
+        document.getElementById("acontecimientosEspe").style.display = "none"; 
+
+        
+      }
+
+      const mostrarOtro = () =>{
+
+        document.getElementById("otrosMotivos").checked ? 
+        document.getElementById("cualDos").style.display = "flex" : 
+        document.getElementById("cualDos").style.display = "none" 
+
+      }
     </script>
   </body>
 </html>
