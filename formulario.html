@@ -1992,9 +1992,59 @@
       <h2>Pregunta 36</h2>
 
 
+      <div class="cajas">
+        <label for="desarrolloSostenibleCol">¿Considera que puede aportar al desarrollo sostenible de Colombia?</label>
+        <div class="opcionSostenibleCol">
+          <input type="radio" name="desarrolloSostenibleCol" id="siPuedo" onclick="mostrarPorq()">
+          <label for="siPuedo"> Si </label>
+        </div>
+        <div class="opcionSostenibleCol">
+          <input type="radio" name="desarrolloSostenibleCol" id="noPuedo" onclick="mostrarPorq()" >
+          <label for="noPuedo"> No</label>
+        </div>
+      </div>
 
+      <div class="cajas" id="elementoPorq">
+        <label for="porque3">¿por qué?</label>
+        <input type="text" name="porque3" id="porque3">
+
+      </div>
+
+      
       <h2>Pregunta 37</h2>
+      <div class="cajas">
+        <label for="desarrolloSostenibleResi"> ¿Considera que puede aportar al desarrollo sostenible de su país de residencia?<label>
+        <div class="opcionSostenibleResi">
+          <input type="radio" name="desarrolloSostenibleResi" id="siPuedo" onclick="mostrarPorq2()">
+          <label for="siPuedo"> Si </label>
+        </div>
+        <div class="opcionSostenibleResi">
+          <input type="radio" name="desarrolloSostenibleResi" id="noPuedo" onclick="mostrarPorq2()" >
+          <label for="noPuedo"> No</label>
+        </div>
+      </div>
+      <div class="cajas" id="elementoPorq2">
+        <label for="porque4">¿por qué?</label>
+        <input type="text" name="porque4" id="porque4">
+
+      </div>
+
+
+
       <h2>Pregunta 38</h2>
+
+
+      <div class="cajas">
+        <label for="contacto">¿Usted está dispuesto a ser contactado para una futura investigación/participación/divulgación de actividades?</label>
+        <div class="opcionContacto">
+          <input type="radio" name="contacto" id="siContacto">
+          <label for="siContacto">Si</label>
+        </div>
+        <div class="opcionContacto">
+          <input type="radio" name="contacto" id="noContacto">
+          <label for="noContacto">No</label>
+        </div>
+      </div>
     </div>
 
     <script>
@@ -2264,6 +2314,16 @@
         document.getElementById("cualDos").style.display = "flex" : 
         document.getElementById("cualDos").style.display = "none" 
 
+      }
+
+
+      const mostrarPorq = () =>{
+
+        document.getElementById("elementoPorq").style.display = "flex";
+      }
+      const mostrarPorq2 = () =>{
+
+        document.getElementById("elementoPorq2").style.display = "flex";
       }
     </script>
   </body>
